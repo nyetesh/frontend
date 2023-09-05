@@ -1,0 +1,32 @@
+<div class="alert" id="alertBox" #alertbox [@fadeAnimation]="{value: animationState, params:
+      { fadeIn: alertConfig.animation?.fadeIn, fadeOut: alertConfig.animation?.fadeOut }}"
+   (@fadeAnimation.done)="onFadeFinished($event)">
+
+   <div class="alert__content">
+      <nb-icon class="alert__icon" icon={{data.type}} pack="alert-icon"> </nb-icon>
+
+      <div class="alert__info">
+         <h6 class="alert__title">
+            {{data.heading}}
+         </h6>
+         <p class="alert__description">{{data.description}}</p>
+         <scl-button-group>
+            <ng-container *ngIf="data.link?.type === 'outline'">
+               <button type="submit" nbButton outline status={{data.type}} [routerLink]="data.link?.route">
+                  {{data.link?.label}}
+               </button>
+            </ng-container>
+            <ng-container *ngIf="data.link?.type === 'ghost'">
+               <button type="button" nbButton ghost status={{data.type}}>
+                  {{data.link?.label}}
+               </button>
+            </ng-container>
+         </scl-button-group>
+      </div>
+      <div class="alert__button-wrapper">
+         <button type="button" nbButton ghost size="small">
+            <nb-icon icon="close" pack="alert-icon" (click)="close()"> </nb-icon>
+         </button>
+      </div>
+   </div>
+</div>

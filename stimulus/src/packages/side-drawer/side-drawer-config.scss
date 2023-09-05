@@ -1,0 +1,15 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        scl-side-drawer-background-color: color-base-white,
+        scl-side-drawer-width: 27.5rem,
+        scl-side-drawer-min-height: 100vh,
+        scl-side-drawer-padding: 1.5rem,
+
+        scl-side-drawer-content-width: 100%,
+
+      ),
+    default,
+    default);
+    

@@ -1,0 +1,70 @@
+<form class="form" [formGroup]="dialogServiceForm">
+    <xpas-dialog>
+        <xpas-dialog-header [heading]="dialogData.title" [ref]="ref">
+        </xpas-dialog-header>
+
+        <xpas-dialog-body>
+            <xpas-image-info [src]="'assets/illustrations/Illustration.svg'">
+                {{ dialogData.headerMessage }}
+            </xpas-image-info>
+
+            <section gap="medium"></section>
+
+            <scl-button-group-header textType="bodyMedium" weight="medium" [heading]="'Suggested Replies'" />
+            
+            <section gap="micro"></section>
+            
+            <scl-button-group>
+                <button
+                    nbButton
+                    size="small"
+                    *ngFor="let item of this.dialogData.suggestionMessages"
+                    (click)="selectMessage(item)"
+                >
+                    {{ item }}
+                </button>
+            </scl-button-group>
+
+            <section gap="medium"></section>
+
+            <scl-form-field errorMessage>
+                <textarea
+                    type="text"
+                    nbInput
+                    fullWidth
+                    id="remarks"
+                    rows="4"
+                    placeholder="Remarks"
+                    fieldSize="large"
+                    formControlName="remarks"
+                    name="Remarks"
+                >
+                </textarea>
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <xpas-dialog-footer>
+                <scl-button-group>
+                    <button
+                        nbButton
+                        size="small"
+                        [status]="dialogData.eventType| status"
+                        (click)="onSubmit()"
+                    >
+                        {{ dialogData.eventType }}
+                    </button>
+
+                    <button
+                        size="small"
+                        type="button"
+                        nbButton
+                        outline
+                        (click)="cancel()"
+                    >
+                        Cancel
+                    </button>
+                </scl-button-group>
+            </xpas-dialog-footer>
+        </xpas-dialog-body>
+    </xpas-dialog>
+</form>

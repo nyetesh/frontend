@@ -1,0 +1,87 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        scl-link-small-font-size: 0.75rem,
+        scl-link-small-line-height: 1rem,
+
+        scl-link-medium-font-size: 0.875rem,
+        scl-link-medium-line-height: 1.25rem,
+
+        scl-link-large-font-size: 1rem,
+        scl-link-large-line-height: 1.25rem,
+
+        // Basic link
+        scl-link-basic-text-color: color-basic-600,
+
+        scl-link-basic-hover-text-color: color-basic-700,
+
+        scl-link-basic-active-text-color: color-basic-800,
+
+        scl-link-basic-focus-text-color: color-basic-600,
+
+        scl-link-basic-disabled-text-color: color-basic-400,
+
+        // Primary link
+
+        scl-link-primary-text-color: color-primary-600,
+
+        scl-link-primary-hover-text-color: color-primary-700,
+
+        scl-link-primary-active-text-color: color-primary-800,
+
+        scl-link-primary-focus-text-color: color-primary-600,
+
+        scl-link-primary-disabled-text-color: color-primary-300,
+
+        // Danger Link
+
+        scl-link-danger-text-color: color-danger-700,
+
+        scl-link-danger-hover-text-color: color-danger-800,
+
+        scl-link-danger-active-text-color: color-danger-900,
+
+        scl-link-danger-focus-text-color: color-danger-700,
+
+        scl-link-danger-disabled-text-color: color-danger-300,
+
+        // Info Link
+
+        scl-link-info-text-color: color-info-700,
+
+        scl-link-info-focus-text-color: color-info-800,
+
+        scl-link-info-hover-text-color: color-info-900,
+
+        scl-link-info-active-text-color: color-info-700,
+
+        scl-link-info-disabled-text-color: color-info-300,
+
+        // Success Link
+
+        scl-link-success-text-color: color-success-700,
+
+        scl-link-success-hover-text-color: color-success-800,
+
+        scl-link-success-active-text-color: color-success-900,
+
+        scl-link-success-focus-text-color: color-success-700,
+
+        scl-link-success-disabled-text-color: color-success-300,
+
+        // Warning Link
+
+        scl-link-warning-text-color: color-warning-700,
+
+        scl-link-warning-hover-text-color: color-warning-800,
+
+        scl-link-warning-active-text-color: color-warning-900,
+
+        scl-link-warning-focus-text-color: color-warning-700,
+
+        scl-link-warning-disabled-text-color: color-warning-300,
+    ),
+    default,
+    default
+);

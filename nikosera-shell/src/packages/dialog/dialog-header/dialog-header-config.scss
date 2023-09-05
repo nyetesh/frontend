@@ -1,0 +1,14 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        dialog-header-title-font-size: title-medium-font-size,
+        dialog-header-title-line-height: title-medium-line-height,
+        dialog-header-title-text-align: center,
+        dialog-header-title-margin: 0,
+        dialog-header-title-font-weight: 600,
+        dialog-header-icon-font-size: 1rem,
+    ),
+    default,
+    default
+);

@@ -1,0 +1,6 @@
+@use '@nebular/theme/styles/theming' as *;
+
+.scl-section-line-separator {
+  width: nb-theme(scl-section-line-separator-width);
+  border-bottom: nb-theme(scl-section-line-separator-border-width) solid nb-theme(scl-section-line-separator-border-color);
+}

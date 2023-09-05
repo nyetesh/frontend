@@ -1,0 +1,21 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        // Container Info styles
+        
+        // Container Content styles
+        xpas-image-card-content-width: 22.5rem,
+        xpas-image-card-content-gap: 0.75rem,
+        xpas-image-card-content-min-height: 100%,
+
+        // Container Title styles
+        xpas-image-card-title-font-size: title-medium-font-size,
+        xpas-image-card-title-line-height: 1.44,
+        xpas-image-card-title-font-weight: semi-bold-font-weight,
+        xpas-image-card-title-margin: 0 0 0.25rem 0,
+        xpas-image-card-title-color: color-basic-900,
+    ),
+    default,
+    default
+);

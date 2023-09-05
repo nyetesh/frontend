@@ -1,0 +1,9 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        button-group-gap: 0 0.75rem,
+    ),
+    default,
+    default
+);

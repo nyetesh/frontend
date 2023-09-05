@@ -1,0 +1,13 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        dialog-paading: 1.25rem 1.5rem,
+        dialog-backgorund-color: color-base-white,
+        dialog-max-width: 32rem,
+        dialog-gap: 1rem,
+        dialog-border-radius: 6px,
+    ),
+    default,
+    default
+);

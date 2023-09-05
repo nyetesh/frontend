@@ -1,0 +1,9 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-form-field-wrapper-gap: 0.75rem,
+    ),
+    default,
+    default
+);   

@@ -1,0 +1,67 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+
+        scl-text-display-large-font-size: 3.5rem,
+        scl-text-display-large-line-height: 4rem,
+        
+        scl-text-display-medium-font-size: 2.75rem,
+        scl-text-display-medium-line-height: 3.25rem,
+
+        scl-text-display-small-font-size: 2.25rem,
+        scl-text-display-small-line-height: 2.75rem,
+
+        scl-text-headline-large-font-size: 2rem,
+        scl-text-headline-large-line-height: 2.5rem,
+
+        scl-text-headline-medium-font-size: 1.75rem,
+        scl-text-headline-medium-line-height: 2.25rem,
+
+        scl-text-headline-small-font-size: 1.5rem,
+        scl-text-headline-small-line-height: 2rem,
+
+        scl-text-title-large-font-size: 1.375rem,
+        scl-text-title-large-line-height: 1.75rem,
+
+        scl-text-title-medium-font-size: 1.125rem,
+        scl-text-title-medium-line-height: 1.625rem,
+
+        scl-text-title-small-font-size: 1rem,
+        scl-text-title-small-line-height: 1.5rem,
+
+        scl-text-button-large-font-size: 1.125rem,
+        scl-text-button-large-line-height: 1.75rem,
+
+        scl-text-button-medium-font-size: 1rem,
+        scl-text-button-medium-line-height: 1.5rem,
+
+        scl-text-button-small-font-size: 0.875rem,
+        scl-text-button-small-line-height: 1.25rem,
+
+        scl-text-body-large-font-size: 1rem,
+        scl-text-body-large-line-height: 1.5rem,
+
+        scl-text-body-medium-font-size: 0.875rem,
+        scl-text-body-medium-line-height: 1.25rem,
+
+        scl-text-body-small-font-size: 0.75rem,
+        scl-text-body-small-line-height: 1rem,
+
+        scl-text-label-large-font-size: 0.875rem,
+        scl-text-label-large-line-height: 1.25rem,
+
+        scl-text-label-medium-font-size: 0.75rem,
+        scl-text-label-medium-line-height: 1rem,
+
+        scl-text-label-small-font-size: 0.625rem,
+        scl-text-label-small-line-height: 0.75rem,
+
+        scl-text-light-font-weight: 400,
+        scl-text-medium-font-weight: 500,
+        scl-text-semi-bold-font-weight: 600,
+        scl-text-bold-font-weight: 700,
+    ),
+    default,
+    default
+);

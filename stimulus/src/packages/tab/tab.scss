@@ -1,0 +1,52 @@
+@use "@nebular/theme/styles/theming" as *;
+nb-tabset {
+    display: inline-flex;
+    padding: nb-theme(route-tabset-padding);
+    border-radius: nb-theme(route-tabset-border-radius);
+
+    .tab {
+        background-color: nb-theme(scl-tabset-background-color);
+        display: flex;
+        padding: nb-theme(scl-tabset-tab-padding);
+
+        &:first-child {
+            border-top-left-radius: nb-theme(tabset-border-radius);
+            border-bottom-left-radius: nb-theme(tabset-border-radius);
+            padding-left: nb-theme(tabset-padding);
+        }
+        &:last-child {
+            border-top-right-radius: nb-theme(tabset-border-radius);
+            border-bottom-right-radius: nb-theme(tabset-border-radius);
+        }
+
+        &.active {
+            .tab-link {
+                border-radius: nb-theme(tabset-tab-active-border-radius);
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .tab-link {
+        min-width: nb-theme(route-tabset-min-width);
+        border-radius: nb-theme(tabset-tab-active-border-radius);
+
+        &:focus {
+            outline: nb-theme(route-tabset-tab-focus-border-width) solid
+                nb-theme(route-tabset-tab-focus-outline-color);
+        }
+
+        &:active {
+            background-color: nb-theme(
+                route-tabset-tab-active-background-color
+            );
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+}

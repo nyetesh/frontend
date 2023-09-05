@@ -1,0 +1,57 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        input-medium-text-font-weight: light-font-weight,
+        input-medium-text-font-size	: body-medium-font-size,
+        input-medium-text-line-height: body-medium-line-height,
+
+        input-medium-padding: 0.625rem 0.875rem,
+        input-medium-height: 2.5rem,
+        input-medium-placeholder-text-font-size: input-medium-text-font-size,
+
+        input-large-text-font-weight: input-medium-text-font-weight,
+        input-large-text-font-size: input-medium-text-font-size,
+        input-large-text-line-height: input-medium-text-line-height,
+    
+        input-basic-background-color: color-control-default,
+        input-basic-hover-background-color: input-basic-background-color,
+    
+        input-basic-border-color: color-basic-300,
+        input-basic-hover-border-color: color-basic-400,
+        input-basic-focus-border-color: color-primary-100,
+        input-basic-focus-background-color: color-control-default,
+
+        input-basic-placeholder-text-color: color-basic-500,
+
+        // outline
+        input-outline-width: 0.25rem,
+        input-outline-style: solid,
+    
+        input-rectangle-border-radius: 0.375rem, 
+    
+        // input danger
+        input-danger-background-color: color-control-default,
+        input-danger-border-color: color-danger-300,
+        input-danger-outline-color:color-danger-100,
+
+        input-danger-focus-background-color: color-control-default,
+
+        input-danger-hover-background-color: color-control-default,
+        input-danger-hover-border-color: color-danger-400,
+
+        // input-filled
+        input-basic-text-color: color-basic-900,
+
+        // disabled-input
+        input-basic-disabled-border-color: color-basic-300,
+        input-basic-disabled-background-color: color-control-default,
+        input-basic-disabled-placeholder-text-color: color-basic-400,
+
+        // readonly input
+        input-readonly-background-color: color-basic-100,
+
+    ),
+    default,
+    default
+);

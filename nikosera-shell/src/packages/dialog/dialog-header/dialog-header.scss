@@ -1,0 +1,17 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-dialog-header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+
+    &__title {
+        font-size: nb-theme(dialog-header-title-font-size);
+        line-height: nb-theme(dialog-header-title-line-height);
+        font-weight: nb-theme(dialog-header-title-font-weight);
+        
+        text-align: nb-theme(dialog-header-title-text-align);
+        margin: nb-theme(dialog-header-title-margin);
+    }
+
+}

@@ -1,0 +1,78 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        select-max-width: 26.25rem,
+        
+        select-border-radius: input-rectangle-border-radius,
+        select-border-width: input-border-width,
+        select-border-style: input-border-style,
+        
+        select-medium-padding: input-medium-padding,
+        select-medium-text-font-size: input-medium-text-font-size,
+        select-medium-text-line-height: input-medium-text-line-height,
+        
+        select-outline-width: input-outline-width,
+        
+        select-basic-text-color: input-basic-text-color,
+        select-basic-border-color: input-basic-border-color,
+        select-basic-hover-border-color: input-basic-hover-border-color,
+        
+        select-focus-outline-color: color-primary-100,
+
+        // disabled
+        select-disabled-background-color: color-basic-100,
+        select-disabled-border-color: color-basic-300,
+        select-disabled-text-color: color-basic-900,
+        
+        // placeholder
+        select-basic-placeholder-text-color: input-basic-placeholder-text-color,
+        select-disabled-placeholder-text-color: color-basic-900,
+
+        select-clear-wrapper-height: 1.5rem,
+        select-clear-wrapper-width: 1.5rem,
+
+        select-wrapper-height: 1rem,
+        select-wrapper-width: 1rem,
+        select-clear-wrapper-top:50%,
+        select-clear-wrapper-right: 1.5rem,
+        select-clear-wrapper-translate: translateY(-50%),
+
+        select-arrow-height: 0.5rem,
+        select-arrow-width: 0.5rem,
+        select-arrow-margin: -0.25rem 0 0 0,
+        select-arrow-rotate: rotate(-45deg),
+        select-arrow-border-width: 0 0 0.063rem 0.063rem,
+        select-arrow-border-color: color-basic-600,
+
+        select-dropdown-padding: 0,
+        select-dropdown-panel-left: 0,
+        select-dropdown-panel-margin: 0.3125rem 0 0 0,
+        select-dropdown-panel-items-border-radius: 0.75rem,
+        select-dropdown-panel-items-margin: 0 0.5rem,
+        select-dropdown-panel-option-padding: 0.625rem 0.875rem,
+        select-dropdown-option-disabled-opacity: 0.7,
+        select-dropdown-option-marked-color: color-basic-50,
+        select-dropdown-option-marked-border-radius: 0.25rem,
+        select-dropdown-option-selected-color: color-basic-50,
+
+        select-container-value-min-height: 1.25rem,
+        select-container-input-padding: 1.5rem,
+        select-container-value-label-color: color-basic-900,
+
+        select-option-label-gap: 0.5rem,
+        select-option-label-padding: 0  0 0 1.5rem,
+        select-option-label-font-size: scl-text-body-medium-font-size,
+        select-option-label-subtitle-max-width: 100%,
+        select-option-label-subtitle-flex-basis: 100%,
+        select-option-label-subtitle-margin-top: 0.25rem,
+
+        select-option-selected-icon-left: 0.875rem,
+        select-option-selected-icon-translate: translateY(75%),
+        select-option-selected-icon-width: 1rem,
+        select-option-selected-icon-height: 1rem,
+
+    ),
+    default,
+    default
+);

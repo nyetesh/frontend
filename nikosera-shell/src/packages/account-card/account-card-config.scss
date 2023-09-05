@@ -1,0 +1,37 @@
+
+
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-account-card-padding: 0.75rem 1rem,
+        xpas-account-card-gap: 1rem,
+
+        xpas-account-card-border-width: 0.0625rem,
+        xpas-account-card-border-radius: 0.375rem,
+
+        xpas-account-card-primary-background-color: color-primary-50,
+        xpas-account-card-primary-border-color: color-primary-200,
+
+        xpas-account-card-info-background-color: color-info-50,
+        xpas-account-card-info-border-color: color-info-200,
+        
+        xpas-account-card-success-background-color: color-success-50,
+        xpas-account-card-success-border-color: color-success-200,
+        
+        xpas-account-card-basic-background-color: color-basic-50,
+        xpas-account-card-basic-border-color: color-basic-200,
+
+        xpas-account-card-warning-border-color: color-warning-200,
+        xpas-account-card-warning-background-color: color-warning-50,
+        
+        xpas-account-card-danger-border-color: color-danger-200,
+        xpas-account-card-danger-background-color: color-danger-50,
+        
+        xpas-account-card-ghost-border-color: color-basic-300,
+        xpas-account-card-ghost-background-color: transparent,
+       
+    ),
+    default,
+    default
+);  

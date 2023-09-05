@@ -1,0 +1,61 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme((
+      text-button-font-weight: 500,
+
+      button-filled-small-padding: 0.5rem 0.75rem,
+      button-filled-medium-padding: 0.625rem 1rem,
+      button-filled-large-padding: 0.875rem 1.25rem,
+
+      text-button-medium-line-height: 1.43,
+      text-button-medium-font-size: 0.875rem,
+
+      button-small-height: 2rem,
+      button-medium-height: 2.5rem,
+      button-large-height: 3rem,
+      
+      button-outline-small-padding: button-filled-small-padding,
+      button-outline-medium-padding: button-filled-medium-padding,
+      button-outline-large-padding: button-filled-large-padding,
+
+      button-ghost-small-padding: button-filled-small-padding,
+      button-ghost-medium-padding: button-filled-medium-padding,
+      button-ghost-large-padding: button-filled-large-padding,
+
+      button-rectangle-border-radius: 6px,
+      button-filled-text-transform: capitalize,
+      button-text-font-weight: 500,
+
+      button-outline-color: color-basic-200,
+      button-outline-width: 4px,
+
+      button-outline-basic-border-color: color-basic-300,
+      button-outline-text-transform: capitalize,
+      button-outline-basic-text-color: color-basic-600,
+      button-outline-basic-hover-text-color: color-basic-700,
+      button-outline-basic-hover-border-color: color-basic-300,
+      button-outline-basic-active-border-color: color-basic-300,
+
+      button-outline-basic-focus-border-color	: color-basic-300,
+      button-outline-basic-focus-background-color: button-outline-basic-background-color,
+      button-outline-focus-inset-shadow-length: (0, 0, 0, 50vmax),
+
+      button-outline-basic-disabled-background-color: color-base-white,
+
+      button-ghost-basic-text-color: color-basic-600,
+      button-ghost-basic-hover-background-color: color-basic-50,
+      button-ghost-basic-hover-border-color: color-basic-50,
+      button-ghost-basic-hover-text-color: color-basic-700,
+      button-ghost-basic-active-background-color:  color-basic-100,
+      button-ghost-basic-active-border-color: color-basic-100,
+      button-ghost-basic-active-text-color:  color-basic-800,
+      button-ghost-text-transform: capitalize,
+      button-ghost-focus-inset-shadow-length: (0, 0, 0, 50vmax),
+      button-ghost-basic-focus-background-color: color-base-white,
+
+      
+
+      ),
+    default,
+    default);
+    

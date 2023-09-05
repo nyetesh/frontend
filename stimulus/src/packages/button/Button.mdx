@@ -1,0 +1,45 @@
+import { Meta, Controls, Canvas, Description, Story } from '@storybook/blocks';
+import * as ButtonStories from './button.stories';
+
+<Meta title="Stimulus/Button" />
+
+# Button
+
+Use nebular directive for button.  
+*Ref: [https://akveo.github.io/nebular/docs/components/button/overview#nbbuttoncomponent](https://akveo.github.io/nebular/docs/components/button/overview#nbbuttoncomponent)*
+
+```html
+<button type="button" nbButton>Button</button>
+```
+
+## Fill Buttons
+```html
+<button type="button" nbButton [status]="primary">Button</button>
+<button type="button" nbButton [status]="danger">Button</button>
+<button type="button" nbButton [status]="basic">Button</button>
+```
+<Canvas of={ButtonStories.Fill}>
+    <Description of={ButtonStories.Fill} />
+    <Story of={ButtonStories.Fill} />
+</Canvas>
+<Controls of={ButtonStories.Fill}/>
+
+## Outline Buttons
+```html
+<button type="button" nbButton [status]="basic" outline>Button</button>
+```
+<Canvas of={ButtonStories.Outline}>
+    <Description of={ButtonStories.Outline} />
+    <Story of={ButtonStories.Outline} />
+</Canvas>
+<Controls of={ButtonStories.Outline}/>
+
+## Link Buttons
+```html
+<button type="button" nbButton [status]="basic" ghost>Button</button>
+```
+<Canvas of={ButtonStories.Link}>
+    <Description of={ButtonStories.Link} />
+    <Story of={ButtonStories.Link} />
+</Canvas>
+<Controls of={ButtonStories.Link}/>

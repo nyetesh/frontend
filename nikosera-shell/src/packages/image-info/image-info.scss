@@ -1,0 +1,15 @@
+@use "@nebular/theme/styles/theming" as *;
+.xpas-image-info {
+    display: grid;
+    place-items: center;
+    gap: nb-theme(image-info-gap);
+
+    &__description {
+        font-size: nb-theme(image-info-font-size);
+        line-height: nb-theme(image-info-line-height);
+        color: nb-theme(image-info-color);
+        text-align: nb-theme(image-info-text-align);
+        margin: nb-theme(image-info-margin);
+
+    }
+}

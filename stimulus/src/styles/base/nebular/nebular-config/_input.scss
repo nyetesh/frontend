@@ -1,0 +1,27 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme((
+    input-medium-text-font-weight: 400,
+
+    input-medium-padding: 0.625rem 0.875rem,
+
+    input-basic-background-color: color-control-default,
+    input-basic-hover-background-color: input-basic-background-color,
+
+    input-basic-border-color: color-basic-300,
+    input-basic-hover-border-color: color-basic-400,
+    input-basic-focus-border-color: color-primary-100,
+
+    input-basic-focus-background-color: color-control-default,
+    input-outline-width: 4px,
+
+    input-basic-placeholder-text-color: color-basic-500,
+    input-medium-text-font-size	: 0.875rem,
+    input-rectangle-border-radius: 6px, 
+    input-medium-text-line-height	: 1.43,
+
+    input-medium-height: 40px,
+      ),
+    default,
+    default);
+    

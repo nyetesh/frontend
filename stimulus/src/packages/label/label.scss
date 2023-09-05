@@ -1,0 +1,10 @@
+@use '@nebular/theme/styles/theming' as *;
+
+.scl-label {
+     display: block;
+     color: nb-theme(label-text-color);
+     font-size: nb-theme(label-text-font-size);
+     line-height: nb-theme(label-text-line-height);
+     font-weight: nb-theme(label-text-font-weight);
+     margin-bottom: nb-theme(label-text-margin);
+}

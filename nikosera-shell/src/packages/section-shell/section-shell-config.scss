@@ -1,0 +1,18 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-section-shell-aside-width: 12.375rem,
+        xpas-section-shell-content-width: 1fr,
+        xpas-section-shell-gap: 1.188rem,
+
+        xpas-section-shell-sidebar-padding: 0 1.25rem 0 0,
+        xpas-section-shell-sidebar-border-width: 0.063rem,
+        xpas-section-shell-sidebar-border-style: solid,
+        xpas-section-shell-sidebar-border-color: color-basic-200,
+
+        xpas-section-shell-content-max-width: 26.25rem,
+    ),
+    default,
+    default
+);

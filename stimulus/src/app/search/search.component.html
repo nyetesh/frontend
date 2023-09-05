@@ -1,0 +1,54 @@
+<form [formGroup]="filterForm">
+    <scl-row>
+        <scl-column *ngFor="let field of formFields">
+            <scl-form-field errorMessage>
+                <label [for]="field.formControlName" sclLabel>{{ field.label }}</label>
+
+
+                <ng-container *ngIf="field.type === 'text'">
+                    <input [type]="field.type" fullWidth [formControlName]="field.formControlName"
+                        [placeholder]="field.placeholder" [id]="field.formControlName" nbInput />
+                </ng-container>
+
+                <ng-container *ngIf="field.type === 'select'">
+                    <ng-select [items]="field.options ?? null" bindValue="value" bindLabel="label"
+                        [formControlName]="field.formControlName" [id]="field.formControlName" class="select"
+                        appendTo="body" name="Branch" [placeholder]="field.placeholder">
+                    </ng-select>
+                </ng-container>
+
+                <ng-container *ngIf="field.type === 'checkbox'">
+                    <div *ngFor="let option of field.options" class="checkbox-option">
+                        <label>
+                            <input type="checkbox" [formControlName]="field.formControlName" [value]="option.value" />
+                            {{ option.label }}
+                        </label>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="field.type === 'radio'">
+                    <div *ngFor="let option of field.options" class="radio-option">
+                        <label>
+                            <input type="radio" [formControlName]="field.formControlName" [value]="option.value" />
+                            {{ option.label }}
+                        </label>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="field.type === 'dropdown-text'">
+                    <div class="dropdown-text-field">
+                        <ng-select fullWidth [items]="field.options ?? null" bindValue="value" bindLabel="label"
+                            [formControlName]="field.dropdownFormControlName ?? null" [placeholder]="field.placeholder"
+                            [id]="field.dropdownFormControlName" class="select"></ng-select>
+                        <input [formControlName]="field.formControlName" nbInput />
+                    </div>
+                </ng-container>
+
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+        </scl-column>
+    </scl-row>
+    <scl-button-group>
+        <button type="submit" nbButton status="primary" (click)="search()">Filter</button>
+        <button type="button" nbButton outline (click)="reset()">Reset</button>
+    </scl-button-group>
+</form>

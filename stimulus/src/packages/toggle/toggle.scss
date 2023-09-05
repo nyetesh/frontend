@@ -1,0 +1,21 @@
+@use "@nebular/theme/styles/theming" as *;
+
+nb-toggle .native-input:enabled:focus + .toggle {
+    box-shadow: nb-theme(toggle-focus-shadow);
+}
+
+.toggle {
+    margin: nb-theme(toggle-margin);
+    align-self: flex-start;
+
+}
+
+nb-toggle label.toggle-label {
+    align-items: flex-start;
+}
+
+.scl-toggle-description {
+    color: nb-theme(toggle-basic-description-text-color);
+    display: block;
+    width: 100%;
+}

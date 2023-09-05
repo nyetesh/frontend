@@ -1,0 +1,28 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-data-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: nb-theme(xpas-data-list-padding);
+    gap: nb-theme(xpas-data-list-gap);
+}
+
+.xpas-data-list__label, .xpas-data-list__value{
+    margin: nb-theme(xpas-data-list-margin);
+}
+
+.xpas-data-list__label {
+    width: nb-theme(xpas-data-list-label-width);
+    color: nb-theme(xpas-data-list-label-color);
+    font-size: nb-theme(xpas-data-list-label-font-size) ;
+    font-weight: nb-theme(xpas-data-list-label-font-weight);
+    line-height: nb-theme(xpas-data-list-label-line-height);
+}
+
+.xpas-data-list__value {
+    color: nb-theme(xpas-data-list-content-color);
+    font-size: nb-theme(xpas-data-list-content-font-size) ;
+    font-weight: nb-theme(xpas-data-list-content-font-weight);
+    line-height: nb-theme(xpas-data-list-content-line-height);
+}

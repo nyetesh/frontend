@@ -1,0 +1,12 @@
+.unseen-notification {
+  font-weight: bold;
+}
+
+nb-card {
+  flex: 1 1 45%;
+  margin: 0 2.5%;
+
+  &.own-scroll {
+    height: 30rem;
+  }
+}

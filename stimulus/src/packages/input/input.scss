@@ -1,0 +1,42 @@
+@use "@nebular/theme/styles/theming" as *;
+@use "@nebular/theme/styles/themes/default";
+
+[nbInput].size-medium {
+    height: nb-theme(input-medium-height);
+}
+
+[nbInput] {
+    &.status-basic {
+        &:focus {
+            &:hover {
+                border-color: nb-theme(color-primary-100);
+            }
+        }
+
+        &:focus {
+            outline: nb-theme(input-outline-width) nb-theme(input-outline-style)
+                nb-theme(color-primary-100);
+        }
+    }
+}
+
+[nbInput].status-danger {
+    &:focus {
+        border: none;
+        outline: nb-theme(input-outline-width) nb-theme(input-outline-style)
+            nb-theme(input-danger-outline-color);
+    }
+}
+
+input[type="text"] {
+    &:read-only {
+        background-color: nb-theme(input-readonly-background-color);
+        &:hover {
+            background-color: nb-theme(input-readonly-background-color);
+        }
+    }
+}
+
+textarea[nbInput] {
+    resize: none;
+}

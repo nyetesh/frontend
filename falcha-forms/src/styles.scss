@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@forward '@nebular/theme/styles/theming';
+@use '@nebular/theme/styles/theming' as *;
+@use '@nebular/theme/styles/themes/default';
+
+@forward 'stimulus/src/packages/stimulus.scss';
+
+// framework component styles
+@use '@nebular/theme/styles/globals' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        sidebar-width: 32rem,
+
+        header-height: 0,
+    ),
+    default,
+    default
+);
+
+// install the framework styles
+@include nb-install() {
+    @include nb-theme-global();
+}

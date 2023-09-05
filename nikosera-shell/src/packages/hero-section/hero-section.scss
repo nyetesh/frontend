@@ -1,0 +1,10 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-hero-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: nb-theme(xpas-hero-section-gap);
+    padding: nb-theme(xpas-hero-section-padding);
+    background-color: nb-theme(xpas-hero-section-background-color);
+    border-radius: nb-theme(xpas-hero-section-border-radius);
+}

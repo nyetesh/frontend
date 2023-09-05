@@ -1,0 +1,63 @@
+<form class="form" [formGroup]="dialogServiceForm">
+    <nb-card>
+        <nb-card-body>
+            <div class="dialog-box">
+                <div class="dialog-box__header">
+                    <div class="dialog-box__close" (click)="cancel()">
+                        <!-- <nb-icon icon="cross" pack="icons"></nb-icon> -->
+                    </div>
+                </div>
+
+                <div class="dialog-box__body">
+                    <h2 class="dialog-box__heading">{{ dialogData.title }}</h2>
+                    <p class="dialog-box__description">
+                        {{ dialogData.headerMessage }}
+                    </p>
+                    <h2 class="dialog-box__heading">Suggested Replies</h2>
+                    <scl-button-group>
+                        <button
+                            nbButton
+                            size="small"
+                            class="dialog-box__description"
+                            *ngFor="let item of this.dialogData.suggestionMessages"
+                            (click)="selectMessage(item)"
+                        >
+                            {{ item }}
+                        </button>
+                    </scl-button-group>
+                    <div class="dialog-box__form-group">
+                        <scl-form-field errorMessage>
+                            <textarea
+                                type="text"
+                                nbInput
+                                fullWidth
+                                id="remarks"
+                                placeholder="Remarks"
+                                fieldSize="large"
+                                formControlName="remarks"
+                                name="Remarks"
+                            ></textarea>
+                            <scl-form-message></scl-form-message>
+                        </scl-form-field>
+                    </div>
+                </div>
+
+                <div class="button-group button-group--align-center">
+                    <scl-button-group>
+                        <button
+                            nbButton
+                            size="small"
+                            class="dialog-box__description"
+                            [status]="status(dialogData.eventType)"
+                            (click)="onSubmit()"
+                            [disabled]="dialogServiceForm.invalid"
+                        >
+                            {{ dialogData.eventType }}
+                        </button>
+                        <button type="button" nbButton outline   (click)="cancel()">Cancel</button>
+                    </scl-button-group>
+                </div>
+            </div>
+        </nb-card-body>
+    </nb-card>
+</form>

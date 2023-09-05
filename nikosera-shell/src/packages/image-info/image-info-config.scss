@@ -1,0 +1,14 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        image-info-font-size: label-large-font-size,
+        image-info-line-height: label-large-line-height,
+        image-info-color: color-basic-600,
+        image-info-text-align: center,
+        image-info-margin: 0,
+        image-info-gap: 0.75rem,
+    ),
+    default,
+    default
+);

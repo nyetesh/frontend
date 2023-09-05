@@ -1,0 +1,30 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-ribbon{
+    position: relative;
+    
+    &__badge{
+        position: absolute;
+        align-items: center;
+        transform: nb-theme(scl-ribbon-badge-transform);
+        left: nb-theme(scl-ribbon-badge-left);
+        border-top-left-radius: nb-theme(scl-ribbon-badge-border-top-left-radius);
+        border-bottom-left-radius: nb-theme(scl-ribbon-badge-border-bottom-left-radius);
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: nb-theme(scl-ribbon-badge-content-width);
+            height: nb-theme(scl-ribbon-badge-content-height);
+            top: nb-theme(scl-ribbon-badge-content-top);
+            left: 0;
+            background-color: nb-theme(scl-ribbon-badge-content-background-color);
+            border-bottom-left-radius: nb-theme(scl-ribbon-badge-content-border-bottom-left-radius);
+        }
+    }
+
+    &__icon{
+        width: nb-theme(scl-radio-badge-icon-width);
+        height: nb-theme(scl-radio-badge-icon-height);
+    }
+}

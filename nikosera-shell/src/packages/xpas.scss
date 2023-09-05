@@ -1,0 +1,25 @@
+@use './shell/shell.component.scss' as *;
+@use './section-separator/section-separator.scss' as *;
+@use './page-header/page-header.component.scss' as *;
+@use './form-container/form-container.component.scss' as *;
+@use './dialog/dialog.scss' as *;
+@use './dialog/dialog-header/dialog-header.scss' as *;
+@use './dialog/dialog-body/dialog-body.scss' as *;
+@use './dialog/dialog-footer/dialog-footer.scss' as *;
+@use './image-info/image-info.scss' as *;
+@use './section-shell/section-shell.component.scss' as *;
+@use './section-header/section-header.component.scss' as *;
+@use './data-list/data-list.component.scss' as *;
+@use './hero-section/hero-section.scss' as *;
+@use './hero-section/hero-section-title/hero-section-title.scss' as *;
+@use './hero-section/hero-section-row/hero-section-row.scss' as *;
+@use './hero-section/hero-section-row/hero-section-column/hero-section-column.scss' as *;
+@use './account-card/account-card.scss' as *;
+@use './account-card/account-card-header/account-card-header.scss' as *;
+@use './column-seperator/column-separator.scss' as *;
+@use './image-card/image-card.scss' as *;
+@use './form/form-field-wrapper.scss' as *;
+@use './container/container.scss' as *;
+@use './page-container/page-container-info/page-container-info.scss' as *;
+
+@include xpas-shell-install();

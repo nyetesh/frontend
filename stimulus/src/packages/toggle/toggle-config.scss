@@ -1,0 +1,43 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        toggle-height: 1.25rem,
+        toggle-width: 2.25rem,
+
+        toggle-border-width: 0,
+
+        toggle-switcher-size: 1.125rem,
+        toggle-switcher-icon-size: 0,
+
+        toggle-margin: 0.425rem 0 0 0,
+
+        toggle-basic-text-color:color-basic-900,
+        toggle-text-font-weight: 500,
+        txoggle-text-font-size:0.875rem,
+        toggle-text-line-height:1.43rem,
+
+        toggle-basic-description-text-color:color-basic-600,
+        toggle-basic-description-text-margin:0 ,
+        
+        toggle-switcher-backgorund-color: color-base-white,
+        toggle-basic-checked-switcher-background-color: color-base-white,
+
+        toggle-basic-background-color: color-basic-200,
+        toggle-basic-hover-background-color: color-basic-300,
+        toggle-basic-focus-background-color: color-basic-100,
+        toggle-basic-active-background-color: color-basic-200,
+        toggle-basic-disabled-background-color: color-primary-100,
+
+        toggle-basic-checked-background-color: color-primary-500,
+        toggle-basic-checked-hover-background-color: color-primary-600,
+        toggle-basic-checked-focus-background-color: color-primary-500,
+        toggle-basic-checked-active-background-color: color-primary-700,
+
+        toggle-outline-width: 0.125rem,
+        toggle-outline-color: color-primary-100,
+        toggle-focus-shadow: 0 0 0 toggle-outline-width toggle-outline-color,
+    ),
+    default,
+    default
+);

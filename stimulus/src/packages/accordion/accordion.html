@@ -1,0 +1,22 @@
+
+    <ng-container *ngFor="let node of accordion">
+        <ng-container *ngIf="!node.children?.length">
+            <div class="nb-accordion-item-single">
+                {{node.name}}
+            </div>
+        </ng-container>
+        <nb-accordion *ngIf="node.children?.length" >
+            <nb-accordion-item [expanded]="expanded" #accordionItem>
+                <nb-accordion-item-header (click)="onAccordionChange(node, accordionItem)">
+                    <nb-icon icon='arrow-right' pack="scl-accordion"
+                        class="scl-accordion-expansion-indicator"></nb-icon>
+                    {{node.name}}
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                    <ng-container *ngIf="node?.children">
+                        <scl-accordion [dataSource]="node.children" [expanded]="expanded"></scl-accordion>
+                    </ng-container>
+                </nb-accordion-item-body>
+            </nb-accordion-item>
+        </nb-accordion>
+    </ng-container>

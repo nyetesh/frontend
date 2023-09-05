@@ -1,0 +1,12 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-hero-section-padding: 1rem 1.25rem,
+        xpas-hero-section-background-color: color-primary-50,
+        xpas-hero-section-border-radius: 6px,
+        xpas-hero-section-gap: 0.75rem,
+    ),
+    default,
+    default
+);

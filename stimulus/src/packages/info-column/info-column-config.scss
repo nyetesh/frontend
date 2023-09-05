@@ -1,0 +1,14 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        scl-info-column-title-color:color-basic-600,
+        scl-info-column-title-margin:0,
+        scl-info-column-title-font-size:label-medium-font-size,
+        scl-info-column-title-line-height:label-medium-line-height,
+        scl-info-column-title-font-weight:edium-font-weight,
+        scl-info-column-title-text-transform:capitalize,
+    ),
+    default,
+    default
+);  

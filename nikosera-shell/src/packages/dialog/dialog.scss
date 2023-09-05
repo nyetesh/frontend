@@ -1,0 +1,10 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-dialog {
+    display: grid;
+    padding: nb-theme(dialog-paading);
+    background-color: nb-theme(dialog-backgorund-color);
+    max-width: nb-theme(dialog-max-width);
+    gap: nb-theme(dialog-gap);
+    border-radius: nb-theme(dialog-border-radius);
+}

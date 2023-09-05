@@ -1,0 +1,13 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme((
+    
+    text-caption-padding-top: 0.125rem,
+    text-caption-padding-bottom: 0.125rem,
+    text-caption-font-size: label-medium-font-size,
+    text-caption-line-height: label-medium-line-height,
+
+    scl-form-field-padding: 1rem,
+      ),
+    default,
+    default);

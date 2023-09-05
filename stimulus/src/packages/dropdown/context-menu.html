@@ -1,0 +1,9 @@
+<div [nbPopover]="contextMenu" nbPopoverPlacement="bottom" class="context-menu">
+    <ng-content></ng-content>
+</div>
+
+<ng-template #contextMenu>
+    <ng-content select="scl-context-menu-content"></ng-content>
+</ng-template>
+
+

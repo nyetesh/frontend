@@ -1,0 +1,11 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-section-header-column-padding: 0 1.219rem,
+        xpas-section-header-column-border-color: color-basic-400,
+        xpas-section-header-column-border-width: 0.125rem,
+    ),
+    default,
+    default
+);

@@ -1,0 +1,51 @@
+<xpas-page-header heading="Email Templates">
+    <scl-button-group>
+        <a routerLink="create" nbButton status="basic" status="control"  >
+            <nb-icon icon="bank-plus-outline"></nb-icon>
+            Create Email Template
+        </a>
+    </scl-button-group>
+</xpas-page-header>
+<section gap="medium">
+    <scl-filter [formFields]="formFields" (onFilter)="handleSearchFormValues($event)">
+    </scl-filter>
+</section>
+<section gap="large" line>
+</section>
+<section gap="medium">
+    <scl-table [dataset]="emailTemplateList">
+        <ng-template sclTableColumn let-item header="Template Name">{{item.name}}</ng-template>
+        <ng-template sclTableColumn let-item header="Template Type">{{item.type}}</ng-template>
+        <ng-template sclTableColumn let-item header="Subject">{{item.subject}}</ng-template>
+        <ng-template sclTableColumn let-item header="Active">
+            <scl-badge [textContent]="adminStatusOption[item.active]"></scl-badge>
+        </ng-template>
+        <ng-template sclTableColumn let-item header="Action" width="100">
+            <scl-button-group>
+                <ng-container>
+                    <button type="button" nbButton ghost size="medium" (click)="viewDetail(item.id)" nbTooltip="View">
+                        <nb-icon icon="view" pack="xpas-shell"> </nb-icon>
+                    </button>
+                </ng-container>
+                <scl-context-menu>
+                    <button type="button" nbButton ghost size="small" status="basic" nbTooltip="More">
+                        <nb-icon icon="more" pack="xpas-shell"> </nb-icon>
+                    </button>
+                    <scl-context-menu-content>
+                        <scl-context-menu-list>
+                            <ng-container>
+                                <button type="button" nbButton size="small" (click)="edit(item.id)" ghost
+                                    sclContextMenuItem>
+                                    <nb-icon icon="edit" pack="xpas-shell"></nb-icon>
+                                    Edit Details
+                                </button>
+                            </ng-container>
+                        </scl-context-menu-list>
+                    </scl-context-menu-content>
+                </scl-context-menu>
+            </scl-button-group>
+        </ng-template>
+    </scl-table>
+</section>
+<scl-pagination [total]="total" [page]="page.page" [pageSize]="page.pageSize" (changePage)="onPageChange($event)">
+</scl-pagination>

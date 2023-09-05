@@ -1,0 +1,40 @@
+@use "@nebular/theme/styles/theming" as *;
+
+nb-route-tabset  {
+    display: inline-flex;
+    padding: nb-theme(route-tabset-padding);
+    border-radius: nb-theme(route-tabset-border-radius);
+
+    .route-tab  {
+        &:not(:last-child) {
+            margin-right: nb-theme(route-tabset-gap);
+        }
+
+        &.active {
+            .tab-link {
+                border-radius: nb-theme(tabset-tab-active-border-radius);
+                
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+                        
+    .tab-link {
+        min-width: nb-theme(route-tabset-min-width);
+        border-radius: nb-theme(tabset-tab-active-border-radius);
+
+        &:focus {
+            outline:nb-theme(route-tabset-tab-focus-border-width) solid nb-theme(route-tabset-tab-focus-outline-color);
+        }
+
+        &:active {
+            background-color: nb-theme(route-tabset-tab-active-background-color);
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+}

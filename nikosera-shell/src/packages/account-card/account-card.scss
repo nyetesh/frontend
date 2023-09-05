@@ -1,0 +1,18 @@
+@use '@nebular/theme/styles/theming' as *;
+
+.xpas-account-card {
+    display: grid;
+    gap:nb-theme(xpas-account-card-gap); ;
+
+    padding: nb-theme(xpas-account-card-padding);
+    border-radius: nb-theme(xpas-account-card-border-radius);
+
+    // ghost should in be last as we want to overwrite the status 
+    $status: (primary, info, success, warning, danger, basic, ghost);
+    @each $key in $status {
+        &--#{$key} {
+            background-color: nb-theme(xpas-account-card-#{$key}-background-color);
+            border: nb-theme(xpas-account-card-border-width) solid nb-theme(xpas-account-card-#{$key}-border-color);
+        }
+    }
+}

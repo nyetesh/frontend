@@ -1,0 +1,23 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-section-shell {
+    display: grid;
+    grid-template-areas: 'xpas-section-shell-aside xpas-section-shell-content';
+    grid-template-columns: nb-theme(xpas-section-shell-aside-width) nb-theme(xpas-section-shell-content-width);
+    gap: nb-theme(xpas-section-shell-gap);
+
+    &__sidebar {
+        grid-area: xpas-section-shell-aside;
+        min-height: 80vh;
+        padding: nb-theme(xpas-section-shell-sidebar-padding);
+        border-right: nb-theme(xpas-section-shell-sidebar-border-width)
+            nb-theme(xpas-section-shell-sidebar-border-style)
+            nb-theme(xpas-section-shell-sidebar-border-color);
+    }
+
+    &__content {
+        grid-area: xpas-section-shell-content;
+        justify-self: center;
+        min-width: nb-theme(xpas-section-shell-content-max-width);
+    }
+}

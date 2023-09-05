@@ -1,0 +1,125 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "base-corporate-admin": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            },
+            "root": "projects/base-corporate-admin",
+            "sourceRoot": "projects/base-corporate-admin/src",
+            "prefix": "xpc",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/base-corporate-admin",
+                        "index": "projects/base-corporate-admin/src/index.html",
+                        "main": "projects/base-corporate-admin/src/main.ts",
+                        "polyfills": [
+                            "zone.js"
+                        ],
+                        "tsConfig": "projects/base-corporate-admin/tsconfig.app.json",
+                        "inlineStyleLanguage": "scss",
+                        "assets": [
+                            "projects/base-corporate-admin/src/favicon.ico",
+                            "projects/base-corporate-admin/src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "../nikosera-shell/src/assets/",
+                                "output": "./assets/"
+                            }
+                        ],
+                        "styles": [
+                            "projects/base-corporate-admin/src/styles.scss"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/base-corporate-admin/src/environments/environment.ts",
+                                    "with": "projects/base-corporate-admin/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "sourceMap": false,
+                            "aot": true,
+                            "namedChunks": false,
+                            "extractLicenses": false,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "base-corporate-admin:build:production"
+                        },
+                        "development": {
+                            "browserTarget": "base-corporate-admin:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "base-corporate-admin:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "polyfills": [
+                            "zone.js",
+                            "zone.js/testing"
+                        ],
+                        "tsConfig": "projects/base-corporate-admin/tsconfig.spec.json",
+                        "inlineStyleLanguage": "scss",
+                        "assets": [
+                            "projects/base-corporate-admin/src/favicon.ico",
+                            "projects/base-corporate-admin/src/assets"
+                        ],
+                        "styles": [
+                            "projects/base-corporate-admin/src/styles.scss"
+                        ],
+                        "scripts": []
+                    }
+                }
+            }
+        }
+    },
+    "cli": {
+        "analytics": "48c4cf58-3494-43c1-9f57-999fc9771902"
+    }
+}

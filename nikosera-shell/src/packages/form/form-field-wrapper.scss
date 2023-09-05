@@ -1,0 +1,8 @@
+@use '@nebular/theme/styles/theming' as *;
+
+.xpas-form-field-wrapper {
+    display: grid;
+    align-items: center;
+    gap: nb-theme(xpas-form-field-wrapper-gap);
+    grid-template-columns: 1fr auto;
+}

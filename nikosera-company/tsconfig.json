@@ -1,0 +1,35 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "paths": {
+            "@pages/*": [
+                "projects/base-corporate-admin/src/app/pages/*"
+            ],
+            "nikosera-shell/*": [
+                "../nikosera-shell/*"
+            ],
+            "@router/*": [
+                "projects/base-corporate-admin/src/app/router/*"
+            ],
+            "@elements/*": [
+                "projects/base-corporate-admin/src/app/elements/*"
+            ],
+            "@shared/*": [
+                "projects/base-corporate-admin/src/app/shared/*"
+            ],
+            "@core/*": [
+                "projects/base-corporate-admin/src/core/*"
+            ],
+            "stimulus/*": [
+                "../stimulus/*",
+                "projects/base-corporate-admin/src/app/elements/*"
+            ],
+            "oauth/*": [
+                "../oauth/*"
+            ],
+        }
+    },
+}

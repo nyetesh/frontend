@@ -1,0 +1,21 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-text {
+    margin: 0;
+    $textType: ( body-large, body-medium, body-small, display-large, display-medium, display-small, headline-large, headline-medium, headline-small, title-large, title-medium, title-small, button-large, button-medium, button-small,  label-large, label-medium, label-small);
+    @each $key in $textType {
+        &--#{$key} {
+            font-size: nb-theme(scl-text-#{$key}-font-size);
+            line-height: nb-theme(scl-text-#{$key}-line-height);
+        }
+    }
+
+    $textWeight: (bold, semi-bold, light, medium);
+
+    @each $key in $textWeight {
+        &--#{$key} {
+            font-weight: nb-theme(scl-text-#{$key}-font-weight);
+        }
+    }
+
+}

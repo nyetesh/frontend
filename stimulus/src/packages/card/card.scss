@@ -1,0 +1,8 @@
+@use "@nebular/theme/styles/theming" as *;
+
+nb-card {
+    nb-card-body {
+    overflow: initial;
+        position: static;
+    }
+}

@@ -1,0 +1,8 @@
+@use '@nebular/theme/styles/theming' as *;
+
+
+$nb-themes: nb-register-theme((spacing-tiny: 4px,
+            spacing-small: 8px,
+            spacing-medium: 12px),
+        default,
+        default);

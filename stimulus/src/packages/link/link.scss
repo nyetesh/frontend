@@ -1,0 +1,148 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-link {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    border-width: 0;
+    background-color: transparent;
+
+    &--small {
+        font-size: nb-theme(scl-link-small-font-size);
+        line-height: nb-theme(scl-link-small-line-height);
+    }
+    &--medium {
+        font-size: nb-theme(scl-link-medium-font-size);
+        line-height: nb-theme(scl-link-medium-line-height);
+    }
+    &--large {
+        font-size: nb-theme(scl-link-large-font-size);
+        line-height: nb-theme(scl-link-large-line-height);
+    }
+
+    &--basic {
+        color: nb-theme(scl-link-basic-text-color);
+
+        &:hover {
+            color: nb-theme(scl-link-basic-hover-text-color);
+        }
+
+        &:active {
+            color: nb-theme(scl-link-basic-active-text-color);
+        }
+
+        &:focus {
+            color: nb-theme(scl-link-basic-focus-text-color);
+        }
+
+        &[disabled] {
+            color: nb-theme(scl-link-basic-disabled-text-color);
+            cursor: not-allowed;
+        }
+    }
+
+    &--primary {
+        color: nb-theme(scl-link-primary-text-color);
+
+        &:hover {
+            color: nb-theme(scl-link-primary-hover-text-color);
+        }
+
+        &:active {
+            color: nb-theme(scl-link-primary-active-text-color);
+        }
+
+        &:focus {
+            color: nb-theme(scl-link-primary-focus-text-color);
+        }
+
+        &[disabled] {
+            color: nb-theme(scl-link-primary-disabled-text-color);
+            cursor: not-allowed;
+        }
+    }
+
+    &--danger {
+        color: nb-theme(scl-link-danger-text-color);
+
+        &:hover {
+            color: nb-theme(scl-link-danger-hover-text-color);
+        }
+
+        &:active {
+            color: nb-theme(scl-link-danger-active-text-color);
+        }
+
+        &:focus {
+            color: nb-theme(scl-link-danger-focus-text-color);
+        }
+
+        &[disabled] {
+            color: nb-theme(scl-link-danger-disabled-text-color);
+            cursor: not-allowed;
+        }
+    }
+
+    &--info {
+        color: nb-theme(scl-link-info-text-color);
+
+        &:hover {
+            color: nb-theme(scl-link-info-hover-text-color);
+        }
+
+        &:active {
+            color: nb-theme(scl-link-info-active-text-color);
+        }
+
+        &:focus {
+            color: nb-theme(scl-link-info-focus-text-color);
+        }
+
+        &[disabled] {
+            color: nb-theme(scl-link-info-disabled-text-color);
+            cursor: not-allowed;
+        }
+    }
+
+    &--success {
+        color: nb-theme(scl-link-success-text-color);
+
+        &:hover {
+            color: nb-theme(scl-link-success-hover-text-color);
+        }
+
+        &:active {
+            color: nb-theme(scl-link-success-active-text-color);
+        }
+
+        &:focus {
+            color: nb-theme(scl-link-success-focus-text-color);
+        }
+
+        &[disabled] {
+            color: nb-theme(scl-link-success-disabled-text-color);
+            cursor: not-allowed;
+        }
+    }
+
+    &--warning {
+        color: nb-theme(scl-link-warning-text-color);
+
+        &:hover {
+            color: nb-theme(scl-link-warning-hover-text-color);
+        }
+
+        &:active {
+            color: nb-theme(scl-link-warning-active-text-color);
+        }
+
+        &:focus {
+            color: nb-theme(scl-link-warning-focus-text-color);
+        }
+
+        &[disabled] {
+            color: nb-theme(scl-link-warning-disabled-text-color);
+            cursor: not-allowed;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="stepper">
+    <div class="stepper-header">
+        <ng-container *ngFor="let step of steps; let i = index; let isLast = last">
+            <ng-container [ngTemplateOutlet]="stepTemplate" [ngTemplateOutletContext]="{step: step, i: i}"></ng-container>
+            <div *ngIf="!isLast" class="stepper-header__connector" [class.completed]="_getIndicatorType(i, step.state) | stepState"></div>
+        </ng-container>
+    </div>
+
+    <ng-container [ngTemplateOutlet]="selected ? selected.content : null"></ng-container>
+
+    <ng-template let-step="step" let-index="i" #stepTemplate>
+        <scl-step-header [index]="index" [label]="step.label" (click)="step.select()" [selected]="selectedIndex === index"
+            [state]="_getIndicatorType(index, step.state)" [class.disabled]="step.disabled">
+        </scl-step-header>
+    </ng-template>
+</div>

@@ -1,0 +1,29 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-section-line {
+    border-width: nb-theme(xpas-section-line-border-width);
+    border-style: solid;
+    border-color: nb-theme(xpas-section-line-border-color);
+}
+
+.xpas-section-separator {
+    &--micro {
+        margin-bottom: nb-theme(xpas-section-separator-micro-margin);
+    }
+    &--tiny {
+        margin-bottom: nb-theme(xpas-section-separator-tiny-margin);
+    }
+    &--small {
+        margin-bottom: nb-theme(xpas-section-separator-small-margin);
+    }
+
+    &--medium {
+        margin-bottom: nb-theme(xpas-section-separator-medium-margin);
+    }
+    &--large {
+        margin-bottom: nb-theme(xpas-section-separator-large-margin);
+    }
+    &--giant {
+        margin-bottom: nb-theme(xpas-section-separator-giant-margin);
+    }
+}

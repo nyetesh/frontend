@@ -1,0 +1,17 @@
+@use '@nebular/theme/styles/theming' as *;
+
+ .scl-form-control-wrapper {
+    position: relative;
+ }
+
+ .scl-form-control-action {
+    position: absolute;
+    right: nb-theme(scl-form-control-right-position);
+    top: nb-theme(scl-form-control-top-position);
+    transform: nb-theme(scl-form-control-transformation);
+
+   // to override nebular position:relative
+   &[nbButton]:focus, &[nbButtonToggle]:focus {
+      position: absolute;
+   }
+}

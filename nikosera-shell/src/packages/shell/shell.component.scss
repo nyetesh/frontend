@@ -1,0 +1,52 @@
+@use '@nebular/theme/styles/theming' as *;
+@use '../shell/shell-sidebar-menu/shell-sidebar-menu.scss' as *;
+
+
+@mixin xpas-shell-install() {
+
+    .xpas-shell-header {
+        display: flex;
+        align-items: center;
+        gap: nb-theme(shell-header-gap);
+        margin: nb-theme(shell-header-margin);
+        padding: nb-theme(shell-header-padding);
+
+        &__logo {
+            flex-grow: 1;
+            line-height: 1;
+            font-size: 0,
+        }
+    }
+
+    nb-sidebar.compacted {
+        .xpas-shell-header {
+            justify-content: center;
+
+            &__logo {
+                display: none;
+            }
+        }
+    }
+        
+    .xpas-shell-sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: nb-theme(shell-sidebar-height);
+    }
+
+    .xpas-shell-actions {
+        border-top: nb-theme(shell-actions-border-width) solid nb-theme(shell-actions-border-color);
+        margin: nb-theme(shell-actions-margin);
+        padding: nb-theme(shell-actions-padding);
+    }
+
+    .xpas-shell-content {
+        background-color: nb-theme(shell-content-background-color);
+        border-width: nb-theme(shell-content-border-width);
+        border-style: solid;
+        border-color: nb-theme(shell-content-border-color);
+        border-radius: nb-theme(shell-content-border-radius);
+        margin: nb-theme(shell-content-margin);
+    }
+}

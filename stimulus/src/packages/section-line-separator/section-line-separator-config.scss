@@ -1,0 +1,10 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme((
+    scl-section-line-separator-width: 100%,
+    scl-section-line-separator-border-width: 1px,
+    scl-section-line-separator-border-color: color-basic-300,
+      ),
+    default,
+    default);
+    

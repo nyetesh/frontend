@@ -1,0 +1,40 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        radio-cursor:pointer,
+
+        radio-width: 1.25rem,
+        radio-height: 1.25rem,
+        
+        radio-basic-inner-circle-scale:0.4,
+        radio-basic-inner-circle-color: color-primary-500,
+
+        radio-basic-checked-background-color: color-primary-50,
+        radio-basic-checked-border-color: color-primary-500,
+
+        radio-basic-hover-background-color: color-primary-100,
+        radio-basic-hover-border-color: color-primary-600,
+        radio-basic-hover-checked-background-color: color-primary-100,
+        radio-basic-hover-inner-circle-color: color-primary-600,
+
+        radio-basic-focus-background-color: color-basic-hover-background-color,
+        radio-basic-focus-border-color: color-primary-100,
+
+        radio-basic-active-border-color: color-primary-500,
+        radio-basic-active-inner-circle-color: color-primary-700,
+        radio-basic-active-background-color:color-primary-100,
+        radio-basic-active-checked-border-color: color-primary-700,
+        radio-basic-active-checked-background-color: color-primary-200,
+
+        radio-basic-disabled-background-color: color-basic-100,
+        radio-basic-disabled-border-color: color-basic-300,
+        radio-basic-disabled-checked-inner-circle-color: color-basic-300,
+        radio-basic-disabled-label-color: color-basic-900,
+
+        radio-outline-width: 2px,
+        radio-outline-color: color-primary-100,
+    ),
+    default,
+    default
+);

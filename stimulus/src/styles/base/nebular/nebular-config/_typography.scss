@@ -1,0 +1,51 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        font-family-primary: #{'Inter', sans-serif},
+        
+        label-large-font-size: .875rem,
+        label-large-line-height: 1.43,
+        label-large-uppercase-tracking: normal,
+
+        label-medium-font-size: .75rem,
+        label-medium-line-height: 1.33,
+        label-medium-uppercase-tracking: 1px,
+
+        label-small-font-size: .625rem,
+        label-small-line-height: 1.2,
+        label-small-uppercase-tracking: 1px,
+
+        title-large-font-size:1.375rem,
+        title-large-line-height:1.75,
+        title-large-letter-spacing:-0.0275rem,
+
+        title-medium-font-size:1.125rem,
+        title-medium-line-height:1.625,
+        title-medium-letter-spacing:-0.0225rem,
+
+        title-small-font-size:1rem,
+        title-small-line-height:1.5,
+        title-small-letter-spacing:-0.02rem,
+
+        body-large-font-size: 1rem,
+        body-large-line-height: 1.5,
+        body-large-letter-spacing: 0,
+
+        body-medium-font-size: 0.875rem,
+        body-medium-line-height: 1.43,
+        body-medium-letter-spacing: 0,
+
+        body-small-font-size: 0.75rem,
+        body-small-line-height: 1.33,
+        body-small-letter-spacing: 0,
+
+        light-font-weight: 400,
+        medium-font-weight: 500,
+        semi-bold-font-weight: 600,
+        bold-font-weight: 700,
+
+    ),
+    default,
+    default
+);

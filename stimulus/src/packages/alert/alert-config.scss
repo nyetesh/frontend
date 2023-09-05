@@ -1,0 +1,40 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        scl-alert-width: 25rem,
+        scl-alert-padding: 0 1rem 0.875rem 1rem,
+        scl-alert-border-radius: 0.375rem,
+        scl-alert-text-color: color-basic-800,
+        scl-alert-background-color: color-basic-50,
+        scl-alert-border-color: color-basic-200,
+        scl-alert-border-width: 0.063rem,
+
+        scl-alert-content-gap: 0.625rem,
+        scl-alert-content-margin: 0 0 0.125rem 0,
+
+        scl-alert-title-margin: 0 0 0.125rem 0,
+        scl-alert-description-margin: 0 0 0.75rem 0,
+        scl-alert-info-margin: 0.875rem 0 0 0,
+        scl-alert-icon-margin: 0.875rem 0 0 0,
+        scl-alert-button-wrapper-margin: 0.375rem 0 0 0,
+
+        scl-alert-warning-background-color: color-warning-50,
+        scl-alert-warning-border-color: color-warning-100,
+        scl-alert-warning-icon-color: color-warning-800,
+
+        scl-alert-danger-background-color: color-danger-50,
+        scl-alert-danger-border-color: color-danger-100,
+        scl-alert-danger-icon-color: color-danger-800,
+
+        scl-alert-info-background-color: color-info-50,
+        scl-alert-info-border-color: color-info-100,
+        scl-alert-info-icon-color: color-info-800,
+
+        scl-alert-success-background-color: color-success-50,
+        scl-alert-success-border-color: color-success-100,
+        scl-alert-success-icon-color: color-success-800,
+    ),
+    default,
+    default
+);

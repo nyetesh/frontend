@@ -1,0 +1,6 @@
+@use '@nebular/theme/styles/theming' as *;
+
+.scl-caption{
+    display: block;
+    padding: nb-theme(scl-form-message-padding);
+}

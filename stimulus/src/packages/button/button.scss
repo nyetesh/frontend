@@ -1,0 +1,69 @@
+@use "@nebular/theme/styles/theming" as *;
+
+[nbButton] {
+    &.size-tiny {
+        &.icon-start.icon-end.appearance-filled {
+            padding: nb-theme(icon-button-filled-tiny-padding);
+            height: nb-theme(button-tiny-height);
+            width: nb-theme(button-tiny-width);
+        }
+    }
+}
+
+[nbButton] {
+    gap: nb-theme(button-gap);
+    box-shadow: nb-theme(box-shadow-depth-extra-small) nb-theme(box-shadow-depth-extra-small-color);
+
+    &.appearance-ghost {
+        box-shadow: none;
+    }
+
+    &.status-primary {
+        &:focus {
+            outline: nb-theme(button-outline-width) nb-theme(button-outline-style)
+                nb-theme(button-outline-focus-color);
+        }
+    }
+    
+    &.status-danger {
+        &:focus {
+            outline: nb-theme(button-outline-width) nb-theme(button-outline-style)
+                nb-theme(button-outline-danger-focus-color);
+        }
+    }
+    
+    &.status-basic {
+        &:focus {
+            outline: nb-theme(button-outline-width) nb-theme(button-outline-style)
+                nb-theme(button-outline-basic-focus-color);
+        }
+    }
+
+    [nbButton].status-primary {
+        &:focus {
+            outline: nb-theme(button-outline-width) nb-theme(button-outline-style)
+                nb-theme(color-primary-100);
+        }
+    }
+
+    [nbButton].status-danger {
+        &:focus {
+            outline: nb-theme(button-outline-width) nb-theme(button-outline-style)
+                nb-theme(color-danger-200);
+        }
+    }
+
+    [nbButton].status-basic {
+        &:focus {
+            outline: nb-theme(button-outline-width) nb-theme(button-outline-style)
+                nb-theme(color-basic-200);
+        }
+    }
+
+    [nbButton].status-info{
+        &:focus {
+            outline: nb-theme(button-outline-width) nb-theme(button-outline-style)
+            nb-theme(button-outline-info-focus-border-color);
+        }
+    }
+}

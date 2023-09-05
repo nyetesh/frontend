@@ -1,0 +1,57 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        // Sidebar styles
+        sidebar-padding: 0.75rem 1rem 0rem 1rem,
+        sidebar-shadow: none,
+        sidebar-background-color: color-basic-50,
+        sidebar-label-font-size: label-small-font-size,
+        sidebar-label-line-height: label-small-line-height,
+
+        // Compacted sidebar styles
+        sidebar-width-compact: 5rem,
+        sidebar-compacted-menu-item-padding: 0.5rem 0rem 0.5rem 0rem,
+        sidebar-compacted-menu-item-icon-margin: 0rem,
+
+        // Menu group styles
+        menu-group-padding: 1.25rem 1rem .25rem,
+
+        // Menu styles
+        menu-text-color: color-basic-600,
+        menu-text-font-size: label-large-font-size,
+        menu-text-line-height: label-large-line-weight,
+        menu-text-font-weight: medium-font-weight,
+
+        // Menu item styles
+        menu-item-padding: 0.5rem 1rem 0.5rem 1rem,
+        menu-item-text-padding: .75rem 1rem,
+        menu-item-border-radius: .375rem,
+        menu-item-divider-width: 0,
+        menu-item-hover-background-color: color-basic-100,
+        menu-item-hover-text-color: color-basic-600,
+        menu-item-active-background-color: color-primary-50,
+        menu-item-active-text-color: color-primary-500,
+        menu-item-border-color: color-basic-300,
+
+        // Menu items styles
+        menu-items-expanded-border-width: 0.125rem, 
+        menu-items-expanded-border-color: color-basic-300, 
+
+        // Submenu styles
+        menu-submenu-padding: 0.25rem 0.719rem,
+        menu-submenu-margin: 0.25rem 0rem 0.25rem 1.625rem ,
+        
+        // Submenu padding when menu collapsed
+        menu-items-collapsed-submenu-padding: 0,
+
+        // Submenu item styles
+        menu-submenu-item-padding: 0.5rem 1rem,
+        menu-submenu-item-hover-background-color: color-basic-100,
+        menu-submenu-item-hover-text-color: color-basic-600,
+        menu-submenu-item-active-background-color: color-primary-50,
+
+    ),
+    default,
+    default
+);

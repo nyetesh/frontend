@@ -1,0 +1,24 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (   
+        // Pagination styles
+        scl-pagination-background-color: color-control-default,
+        scl-pagination-padding: 1rem 0 1.25rem 0,
+        scl-pagination-bottom: 0 ,
+        scl-pagination-item-gap: 0.5rem,
+
+        // Pagination typography
+        scl-pagination-font-size:0.75rem,
+        scl-pagination-line-height:1.33,
+        scl-pagination-font-weight:500,
+        scl-pagination-font-color: color-basic-900,
+
+        // Pagination select
+        scl-pagination-select-padding: 0.375rem 0.875rem,
+        scl-pagination-select-margin: 0 1rem 0 0.5rem,
+        scl-pagination-select-text-color: color-basic-500,
+    ),
+    default,
+    default
+);

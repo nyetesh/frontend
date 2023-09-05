@@ -1,0 +1,40 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-select-input-field {
+    display: flex;
+    border: nb-theme(scl-select-input-field-border-width) solid nb-theme(scl-select-input-field-border-color);
+    border-radius: nb-theme(scl-select-input-field-border-radius);;
+
+    ng-select.select {
+        border-color: nb-theme(scl-select-input-field-border-transparent);
+        width: nb-theme(scl-select-input-field-select-width);
+
+        &::after {
+            display: block;
+            content: "";
+            height: nb-theme(scl-select-input-field-select-after-height);
+            width: nb-theme(scl-select-input-field-select-after-width);
+            background-color: nb-theme(scl-select-input-field-border-color);
+            position: absolute;
+            right: -1px;
+        }
+
+        &.ng-select-focused {
+            &::after {
+                z-index: -1;
+            }
+        }
+    }
+
+    input[nbInput] {
+        border-color: nb-theme(scl-select-input-field-border-transparent);
+    }
+
+    &:hover{
+        ng-select.select {
+            &::after {
+                background-color: nb-theme(scl-select-input-field-border-transparent);
+            }
+        }
+    }
+}

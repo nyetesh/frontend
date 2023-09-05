@@ -1,0 +1,74 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.nb-theme-default {
+    nb-radio {
+        &.status-basic {
+            .native-input {
+                &:disabled{
+                    ~ .text {
+                        color: nb-theme(radio-basic-disabled-label-color);
+                    }
+                }
+            }
+
+            .native-input:enabled {
+                &:checked + .outer-circle {
+                    background-color: nb-theme(color-control-default);
+
+                    &:active {
+                        border-color: nb-theme(
+                            radio-basic-active-checked-border-color
+                        );
+                        background-color: nb-theme(
+                            radio-basic-active-checked-background-color
+                        );
+                    }
+                }
+            }
+
+            label {
+                cursor: nb-theme(radio-cursor);
+            }
+        }
+    }
+}
+
+nb-radio {
+    .outer-circle {
+        &:focus {
+            outline: nb-theme(radio-outline-width) solid
+                nb-theme(radio-basic-focus-border-color);
+            border: none;
+        }
+    }
+
+    &.status-basic {
+        .native-input:disabled:checked{
+            ~ .inner-circle{
+                transform: translateY(-50%) scale(nb-theme(radio-basic-inner-circle-scale));
+            }
+        }
+
+        .native-input:enabled {
+            + .outer-circle {
+                &:active {
+                    background-color: nb-theme(
+                        radio-basic-active-background-color
+                    );
+                    border-color: nb-theme(radio-basic-active-border-color);
+                }
+            }
+        }
+        .native-input:enabled:checked {
+            ~ .inner-circle {
+                transform: translateY(-50%) scale(nb-theme(radio-basic-inner-circle-scale));
+
+                &:active {
+                    background-color: nb-theme(
+                        radio-basic-active-inner-circle-color
+                    );
+                }
+            }
+        }
+    }
+}

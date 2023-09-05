@@ -1,0 +1,63 @@
+
+ <section class="scl-pagination__info-wrapper" *ngIf="showRecords">
+    <div class="scl-pagination__info" *ngIf="pageSize !== undefined">
+        <p class="scl-pagination__text">Items per page</p>
+        <div class="scl-pagination__select-wrapper">
+        <ng-select 
+            (ngModelChange)="itemChange($event)" 
+            [(ngModel)]="pageSize" 
+            class="select scl-pagination__select" 
+            [items]="pageSizeOptions" 
+            [clearable]="false" 
+            [searchable]="false">
+            <ng-template ng-label-tmp let-item="item">
+              {{item}}
+            </ng-template>
+        </ng-select>
+        </div>
+    </div>
+
+    <p class="scl-pagination__text">
+        Records of {{ currentRecords.from }} - 
+        {{ currentRecords.to }} of {{ total }}
+    </p>
+ </section>
+
+<ul *ngIf="pager.pages && pager.pages.length" class="scl-pagination__content" 
+    [class.scl-pagination__content--center]="showRecords == false">
+    <li class="scl-pagination__item scl-pagination__first-item">
+        <button type="button" nbButton size="small" outline [disabled]="pager.currentPage === 1" (click)="setPage(1)">
+            First
+        </button>
+    </li>
+
+    <li *ngFor="let page of pager.pages" [ngClass]="{ active: pager.currentPage === page }"
+        class="scl-pagination__item scl-pagination__number">
+        <button type="button" nbButton size="small" outline 
+            [status]="pager.currentPage === page ? 'primary' : 'basic'" (click)="setPage(page)">
+            {{ page }}
+        </button>
+    </li>
+
+    <li class="scl-pagination__item scl-pagination__last-item">
+        <button type="button"
+            nbButton size="small" outline
+            [disabled]="pager.currentPage === pager.totalPages"
+            (click)="setPage(pager.totalPages)">
+            Last
+        </button>
+    </li>
+    <li class="scl-pagination__item scl-pagination__prev-item">
+        <button type="button" nbButton size="small" outline [disabled]="pager.currentPage === 1"
+            (click)="setPage(pager.currentPage - 1)">
+             <nb-icon icon="pagination-left" pack="scl-pagination"></nb-icon>
+        </button>
+    </li>
+    <li class="scl-pagination__item scl-pagination__next-item">
+        <button type="button"  nbButton size="small" outline [disabled]="pager.currentPage === pager.totalPages"
+            (click)="setPage(pager.currentPage + 1)">
+           
+             <nb-icon icon="pagination-right" pack="scl-pagination"></nb-icon>
+        </button>
+    </li>
+</ul>

@@ -1,0 +1,15 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-hero-section-column {
+    padding: nb-theme(xpas-section-header-column-padding);
+    border-right: nb-theme(xpas-section-header-column-border-width) solid
+        nb-theme(xpas-section-header-column-border-color);
+
+    &:first-of-type {
+        padding-left: 0;
+    }
+
+    &:last-of-type {
+        border-right: none;
+    }
+}

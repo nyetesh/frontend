@@ -1,0 +1,19 @@
+<xpas-page-header heading="Detail" showBack></xpas-page-header>
+
+<nb-layout>
+    <nb-layout-column>
+        <nb-card>
+            <nb-card-body>
+                {{emailTemplateDetail| json}}
+            </nb-card-body>
+        </nb-card>
+
+        <div *ngIf="emailTemplateDetail">
+            <nb-card>
+                <nb-card-body>
+                    <div [innerHTML]="template | sanitizeHtml"></div>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </nb-layout-column>
+</nb-layout>

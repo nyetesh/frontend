@@ -1,0 +1,9 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-page-container-content-height: 100%,
+    ),
+    default,
+    default
+);

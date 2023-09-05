@@ -1,0 +1,15 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-hero-section-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: nb-theme(xpas-section-header-title-gap);
+    margin-bottom: nb-theme(xpas-section-header-title-margin);
+
+    &__text {
+        font-size: nb-theme(xpas-section-header-title-font-size);
+        line-height: nb-theme(xpas-section-header-title-line-height);
+        margin: nb-theme(xpas-section-header-title-heading-margin);
+        font-weight: nb-theme(xpas-section-header-title-font-weight);
+    }
+}

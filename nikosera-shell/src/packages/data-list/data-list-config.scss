@@ -1,0 +1,24 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-data-list-margin: 0, // remove margin of h6 tag
+        xpas-data-list-padding: 0.5rem 0,
+        xpas-data-list-gap: 1.5rem,
+
+        // label
+        xpas-data-list-label-width: 12.375rem,
+        xpas-data-list-label-color: color-basic-600,
+        xpas-data-list-label-font-size: body-medium-font-size,
+        xpas-data-list-label-font-weight: light-font-weight,
+        xpas-data-list-label-line-height: body-medium-line-height,
+
+        // content
+        xpas-data-list-content-color: color-basic-900,
+        xpas-data-list-content-font-size: body-medium-font-size,
+        xpas-data-list-content-font-weight: light-font-weight,
+        xpas-data-list-content-line-height: body-medium-line-height,
+    ),
+    default,
+    default
+);

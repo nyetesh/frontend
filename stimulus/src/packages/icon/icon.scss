@@ -1,0 +1,6 @@
+@use "@nebular/theme/styles/theming" as *;
+
+nb-icon svg {
+    width: nb-theme(icon-svg-width);
+    height: nb-theme(icon-svg-height);
+}

@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Stimulus/Developer's Guide" />
+
+# Developers' Guide
+
+## Achitecture
+
+```
+.
+└── src/
+    └── packages/
+        └── button/
+            ├── button.scss
+            ├── button-config.scss
+            ├── button.html
+            ├── button.ts
+            ├── button.spec.ts
+            ├── button.stories.ts
+            └── button.mdx
+```
+
+## Style Guides
+
+1. For stylesheet
+- Start a class name with `scl-` prefix.
+```scss
+.scl-button {
+    border: 0;
+}
+```
+
+2. For angular component
+- Start a `selector` with `scl-` prefix.
+- Start a name component, directive, pipe and module with `Scl` prefix
+```ts
+@Component({
+    selector: 'scl-button',
+    templateUrl: 'button.html',
+    standalone: true,
+    host: {
+        class: 'scl-button'
+    }
+})
+export class SclButton { }
+```

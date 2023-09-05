@@ -1,0 +1,12 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        user-picture-box-background-color: color-supporting-orange-100,
+        user-initials-text-color: color-supporting-orange-800,
+        user-picture-box-border-color: transparent,
+        user-giant-initials-text-font-size: 1.75rem,
+    ),
+    default,
+    default
+);

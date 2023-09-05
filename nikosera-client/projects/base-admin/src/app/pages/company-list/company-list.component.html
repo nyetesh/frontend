@@ -1,0 +1,54 @@
+<xpas-page-header heading="Consultancy">
+</xpas-page-header>
+
+<section gap="medium">
+    <scl-filter [formFields]="searchField" (onFilter)="handleSearchFormValues($event)">
+    </scl-filter>
+</section>
+
+<section gap="medium">
+    <scl-table [dataset]="companyList">
+        <ng-template sclTableColumn let-item header="Company Name">
+            {{item.name}}
+        </ng-template>
+
+        <ng-template sclTableColumn let-item header="City">
+            {{item.city}}
+        </ng-template>
+
+        <ng-template sclTableColumn let-item header="Contact Number">
+            {{item.contactNumber}}
+        </ng-template>
+
+        <ng-template sclTableColumn let-item header="Action" width="100">
+            <scl-button-group>
+                <ng-container>
+                    <button type="button" nbButton ghost size="medium" (click)="viewDetail(item.eid)" nbTooltip="View">
+                        <nb-icon icon="view" pack="xpas-shell"> </nb-icon>
+                    </button>
+                </ng-container>
+                <scl-context-menu>
+                    <button type="button" nbButton ghost size="small" status="basic" nbTooltip="More">
+                        <nb-icon icon="more" pack="xpas-shell"> </nb-icon>
+                    </button>
+                    <scl-context-menu-content>
+                        <scl-context-menu-list>
+                            <button type="button" nbButton size="small" (click)="scheduleCall(item.eid)" ghost
+                                sclContextMenuItem>
+                                <nb-icon icon="edit" pack="xpas-shell"></nb-icon>
+                                Schedule a Call
+                            </button>
+                            <button type="button" nbButton size="small" (click)="makeCall(item.eid)" ghost
+                                sclContextMenuItem>
+                                <nb-icon icon="edit" pack="xpas-shell"></nb-icon>
+                                Make a Call
+                            </button>
+                        </scl-context-menu-list>
+                    </scl-context-menu-content>
+                </scl-context-menu>
+            </scl-button-group>
+        </ng-template>
+    </scl-table>
+</section>
+<scl-pagination [total]="total" [page]="page.page" [pageSize]="page.pageSize" (changePage)="onPageChange($event)">
+</scl-pagination>

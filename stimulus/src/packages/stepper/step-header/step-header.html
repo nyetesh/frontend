@@ -1,0 +1,10 @@
+<div class="stepper-header__content {{state | stepState}}" [class.stepper-header__selected]="selected"  [class.stepper-header__disabled]="disabled">
+    <div class="stepper-header__index" [class.selected]="selected">
+        {{index + 1}}
+    </div>
+
+    <div class="stepper-header__label">
+        {{label}}
+    </div>
+</div>
+

@@ -1,0 +1,9 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        icon-svg-height:100%,
+        icon-svg-width:100%,
+    ),
+        default,
+        default);

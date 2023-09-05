@@ -1,0 +1,61 @@
+@use "@nebular/theme/styles/theming" as *;
+
+nb-accordion-item {
+    nb-accordion-item-body {
+        & .item-body {
+            background-color: nb-theme(scl-accordion-item-background-color);
+            padding: nb-theme(scl-accordion-item-body-padding);
+
+            .nb-accordion-item-single {
+                font-weight: nb-theme(accordion-item-text-font-weight);
+            }
+
+            nb-accordion-item-body .item-body {
+                padding: nb-theme(scl-accordion-child-item-body-padding);
+            }
+        }
+        
+        &.nb-accordion-item-single {
+            padding: nb-theme(scl-accordion-child-item-padding);
+        }
+    }
+
+    .scl-accordion-expansion-indicator {
+        margin: nb-theme(scl-accrodion-expansion-icon-margin);
+    }
+
+    .accordion-item-header-expanded {
+        .scl-accordion-expansion-indicator {
+            transform: nb-theme(scl-accrodion-expansion-icon-rotation);
+        }
+    }
+
+    nb-accordion-item-header {
+        border-bottom: none;
+        padding: nb-theme(scl-accordion-item-header-padding);
+
+        .expansion-indicator {
+            display: none;
+        }
+    }
+}
+
+.nb-accordion-item-single {
+    color: nb-theme(accordion-header-text-color);
+    font-family: nb-theme(accordion-header-text-font-family);
+    font-size: nb-theme(accordion-header-text-font-size);
+    font-weight: nb-theme(accordion-header-text-font-weight);
+    line-height: nb-theme(accordion-header-text-line-height);
+    padding: nb-theme(scl-accordion-item-single-padding);
+}
+
+.scl-accordion-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    &__text {
+        color: nb-theme(scl-accordion-header-text-color);
+        font-weight: nb-theme(scl-accordion-header-text-font-weight);
+        line-height: nb-theme(scl-accordion-header-text-line-height);
+    }
+}

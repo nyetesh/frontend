@@ -1,0 +1,49 @@
+<xpas-page-header heading="Create Email Template" showBack>
+</xpas-page-header>
+<xpas-form-container>
+
+    <form [formGroup]="createForm" (submit)="create()">
+        <scl-form-field errorMessage>
+            <label for="name" sclLabel>Template Name</label>
+            <input type="text" nbInput id="name" fieldSize="large" placeholder="Template Name"
+                formControlName="name" name="Template Name" fullWidth>
+            <scl-form-message></scl-form-message>
+        </scl-form-field>
+
+        <scl-form-field errorMessage>
+            <label for="type" sclLabel>Template Type</label>
+            <input type="text" nbInput id="templateType" fieldSize="large" placeholder="Template Type"
+                formControlName="type" name="Template Type" fullWidth>
+            <scl-form-message></scl-form-message>
+        </scl-form-field>
+
+        <scl-form-field errorMessage>
+            <label for="subject" sclLabel>Subject</label>
+            <input type="text" nbInput id="subject" fieldSize="large" placeholder="Subject" formControlName="subject"
+                name="Subject" fullWidth>
+            <scl-form-message></scl-form-message>
+        </scl-form-field>
+
+        <scl-form-field errorMessage>
+            <label for="template" sclLabel>Email Content</label>
+            <textarea formControlName="template" fieldSize="large" placeholder="Template" fullWidth nbInput></textarea>
+            <scl-form-message></scl-form-message>
+        </scl-form-field>
+
+        <scl-button-group>
+            <button type="submit" nbButton status="primary" >
+                Create
+            </button>
+            <button type="reset" nbButton outline >Reset</button>
+        </scl-button-group>
+    </form>
+</xpas-form-container>
+
+
+<div *ngIf="template">
+    <nb-card>
+        <nb-card-body>
+            <div [innerHTML]="template | sanitizeHtml"></div>
+        </nb-card-body>
+    </nb-card>
+</div>

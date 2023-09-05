@@ -1,0 +1,21 @@
+.tree-node {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.tree-node nb-checkbox {
+  margin-right: 12px;
+}
+
+.tree-node .nb-icon {
+  margin-right: 5px;
+}
+
+.tree-node td {
+  padding: 5px;
+}
+
+.tree-node .nested-table {
+  margin-left: 20px;
+}

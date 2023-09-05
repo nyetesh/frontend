@@ -1,0 +1,23 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-image-card {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: nb-theme(xpas-image-card-content-width);
+    margin: auto;
+
+    &__content {
+        display: grid;
+        place-items: center;
+        gap: nb-theme(xpas-image-card-content-gap);
+    }
+
+    &__title {
+        font-size: nb-theme(xpas-image-card-title-font-size);
+        line-height: nb-theme(xpas-image-card-title-line-height);
+        font-weight: nb-theme(xpas-image-card-title-font-weight);
+        color: nb-theme(xpas-image-card-title-color);
+        margin: nb-theme(xpas-image-card-title-margin);
+    }
+}

@@ -1,0 +1,23 @@
+.scl-context-menu {
+    display: inline-flex;
+}
+
+.scl-context-menu-content {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 0.5rem;
+
+    [nbButton] {
+        display: block;
+        width: 100%;
+        min-width: 12.875rem;
+        text-align: left;
+    }
+
+    &__list {
+        &:not(:last-child) {
+            border-bottom: 1px solid #e5e7eb;
+        }
+    }
+}

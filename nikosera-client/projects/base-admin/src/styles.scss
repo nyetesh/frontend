@@ -1,0 +1,17 @@
+@forward '@nebular/theme/styles/theming';
+@use '@nebular/theme/styles/theming' as *;
+@use '@nebular/theme/styles/themes/default';
+
+@forward 'stimulus/src/packages/stimulus.scss';
+
+// framework component styles
+@use '@nebular/theme/styles/globals' as *;
+
+@use 'nikosera-shell/src/packages/xpas-config.scss' as *;
+@use 'nikosera-shell/src/packages/xpas.scss' as *;
+
+
+// install the framework styles
+@include nb-install() {
+    @include nb-theme-global();
+}

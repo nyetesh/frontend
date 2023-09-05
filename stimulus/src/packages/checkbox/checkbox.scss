@@ -1,0 +1,47 @@
+@use "@nebular/theme/styles/theming" as *;
+
+nb-checkbox {
+    &.nb-transition {
+        .native-input:focus:not(:checked)
+            + .custom-checkbox:not(:hover):not(:active) {
+            box-shadow: 0 0 0 nb-theme(checkbox-outline-width)
+                nb-theme(checkbox-outline-color);
+        }
+
+        nb-icon.custom-checkbox-icon {
+            width: 0.875rem;
+        }
+
+        .custom-checkbox.checked .custom-checkbox-icon {
+            &:hover {
+                color: nb-theme(checkbox-basic-hover-checked-border-color);
+            }
+
+            &:focus {
+                color: nb-theme(checkbox-basic-focus-checked-border-color);
+            }
+
+            &:active {
+                color: nb-theme(checkbox-basic-active-checked-border-color);
+            }
+        }
+    }
+
+    &.status-basic {
+        .native-input {
+            &:disabled {
+                & ~ .text {
+                    color: nb-theme(checkbox-basic-disabled-text-color);
+                }
+
+                &:checked,
+                &:indeterminate {
+                    + .custom-checkbox {
+                        background-color: nb-theme(checkbox-basic-disabled-background-color);
+                        border-color: nb-theme(checkbox-basic-disabled-border-color);
+                    }
+                }
+            }
+        }
+    }
+}

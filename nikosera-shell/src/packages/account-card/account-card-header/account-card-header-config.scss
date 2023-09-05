@@ -1,0 +1,11 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-account-card-header-gap : 0.25rem,
+        xpas-account-card-header-color: color-basic-900,
+        xpas-account-card-header-detail-color: color-basic-600,
+    ),
+    default,
+    default
+);

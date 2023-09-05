@@ -1,0 +1,103 @@
+
+@use '@nebular/theme/styles/theming' as *;
+
+$stepper: (
+    color: nb-theme(color-basic-900),
+    completed-bg: nb-theme(color-primary-50),
+    selected-bg: nb-theme(color-primary-50),
+    selected-color: nb-theme(color-primary-500),
+    selected-border-color: nb-theme(color-primary-500),
+    selected-text-color: nb-theme(color-basic-900),
+    connector-bg: nb-theme(color-basic-500),
+    border-color: nb-theme(color-basic-500),
+);
+
+.stepper-header {
+    display: flex;
+    align-items: center;
+    color: map-get($stepper, color);
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-bottom: 28px;
+
+    .step-header {
+        &.disabled {
+            pointer-events: none;
+            cursor: initial;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+        cursor: pointer;
+
+        &.completed {
+            .stepper-header__index {
+                font-size: 0;
+                line-height: 0;
+                background-color: map-get($stepper, completed-bg);
+                position: relative;
+                border: 1px solid map-get($stepper, selected-border-color);
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 4px;
+                    left: 8px;
+                    width: 6px;
+                    height: 12px;
+                    border: solid map-get($stepper, selected-color);
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                    border-radius: 1px;
+                }
+            }
+
+            .stepper-header__label {
+                color: map-get($stepper, selected-text-color);
+            }
+        }
+    }
+
+    &__index {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem;
+        width: 1.5rem;
+        border: 1px solid map-get($stepper, border-color);
+        border-radius: 50%;
+        margin-right: 0.5rem;
+
+        &.selected {
+            background-color: map-get($stepper, selected-bg);
+            color: map-get($stepper, selected-color);
+            border: 1px solid map-get($stepper, selected-border-color);
+        }
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+
+    &__connector {
+        height: 0.063rem;
+        flex-basis: 2.5rem;
+        max-width: 2.5rem;
+        background: map-get($stepper, connector-bg);
+        margin-right: 0.5rem;
+
+        &.completed {
+            background: map-get($stepper, selected-color);
+        }
+    }
+
+    &__selected {
+         .stepper-header__label {
+            color:  map-get($stepper, selected-text-color);
+         }
+    }
+}

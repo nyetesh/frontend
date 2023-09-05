@@ -1,0 +1,14 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-section-header-title-font-size: title-medium-font-size,
+        xpas-section-header-title-line-height: label-large-line-height,
+        xpas-section-header-title-margin: 0.563rem,
+        xpas-section-header-title-gap: 0.5rem,
+        xpas-section-header-title-font-weight: semi-bold-font-weight,
+        xpas-section-header-title-heading-margin: 0,
+    ),
+    default,
+    default
+);

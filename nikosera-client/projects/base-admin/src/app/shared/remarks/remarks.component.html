@@ -1,0 +1,42 @@
+<ng-container *ngIf="dialogData">
+    <xpas-page-header [heading]="dialogData.title" showBack>
+        <!-- <button type="button" nbButton (click)="close()" ghost>
+            <nb-icon icon="close" pack="xpas-shell"> </nb-icon>
+        </button> -->
+    </xpas-page-header>
+
+    <form class="form" [formGroup]="remarksForm">
+        <section>{{dialogData.headerMessage}}</section>
+        <section gap="medium"></section>
+
+        <scl-button-group-header textType="bodyMedium" weight="medium" [heading]="'Suggested Replies'" />
+
+        <section gap="tiny"></section>
+
+        <scl-button-group>
+            <button nbButton size="small" *ngFor="let item of this.dialogData.suggestionMessages"
+                (click)="selectMessage(item)">
+                {{ item }}
+            </button>
+        </scl-button-group>
+
+        <section gap="medium"></section>
+
+        <scl-form-field errorMessage>
+            <textarea type="text" nbInput fullWidth id="remarks" rows="4" placeholder="Remarks" fieldSize="large"
+                formControlName="remarks" name="Remarks">
+                </textarea>
+            <scl-form-message></scl-form-message>
+        </scl-form-field>
+
+        <scl-button-group>
+            <button nbButton size="small" [status]="dialogData.eventType| status" (click)="onSubmit()">
+                {{ dialogData.eventType }}
+            </button>
+
+            <button size="small" type="button" nbButton outline (click)="cancel()">
+                Cancel
+            </button>
+        </scl-button-group>
+    </form>
+</ng-container>

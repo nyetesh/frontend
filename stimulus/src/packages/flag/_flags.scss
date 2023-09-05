@@ -1,0 +1,9 @@
+// Emojis for flags is only available for macOS, Android and iOS
+// So, a `country-flag-emoji-polyfill` npm package has been installed
+// and it font has been added for it
+// 
+// @see https://www.npmjs.com/package/country-flag-emoji-polyfill
+
+.flags {
+    font-family: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
+}

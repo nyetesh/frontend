@@ -1,0 +1,29 @@
+.scl-file-uploader {
+    ngx-file-drop {
+        .ngx-file-drop__drop-zone {
+            border: dashed 1.5px #9ca3af;
+            height: auto;
+            padding: 1.535rem;
+            margin-bottom: 8px;
+            border-radius: 10px;
+        }
+
+        .ngx-file-drop__content {
+            height: auto;
+        }
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    &__description {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+}

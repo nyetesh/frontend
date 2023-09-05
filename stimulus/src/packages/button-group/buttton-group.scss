@@ -1,0 +1,6 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-button-group {
+    display: flex;
+    gap: nb-theme(button-group-gap);
+}

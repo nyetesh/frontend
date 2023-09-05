@@ -1,0 +1,9 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme((
+        scl-form-control-right-position: -0.75rem,
+        scl-form-control-top-position: 0,
+        scl-form-control-transformation: translateX(100%),
+      ),
+    default,
+    default);

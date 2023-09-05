@@ -1,0 +1,12 @@
+<ng-container *ngIf="shouldShowBack">
+    <button nbButton ghost (click)="back()" class="xpas-page-header__button">
+        <nb-icon
+            icon="back"
+            pack="page-header">
+        </nb-icon>
+    </button>
+</ng-container>
+<h1 class="xpas-page-header__title">{{ title }}</h1>
+<div class="xpas-page-header__content">
+    <ng-content> </ng-content>
+</div>

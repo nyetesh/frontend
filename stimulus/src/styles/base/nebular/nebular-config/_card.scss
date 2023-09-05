@@ -1,0 +1,9 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme((card-background-color: color-base-white,
+            card-border-color: color-basic-300,
+            card-border-radius: 0.5rem,
+            card-padding: 0.75rem 0.75rem,
+        ),
+        default,
+        default);

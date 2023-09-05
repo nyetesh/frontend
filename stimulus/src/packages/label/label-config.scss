@@ -1,0 +1,12 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme((
+    label-text-color: color-basic-600,
+    label-text-font-size: 0.875rem,
+    label-text-line-height: 1.25rem,
+    label-text-font-weight: 500,
+    label-text-margin: 0.375rem,
+      ),
+    default,
+    default);
+    

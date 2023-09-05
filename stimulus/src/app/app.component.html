@@ -1,0 +1,369 @@
+<nb-layout>
+    <nb-layout-column>
+        <scl-button-group>
+            <button type="button" nbButton status="primary" size="small">
+                Primary
+            </button>
+            <button type="button" nbButton status="primary">Primary</button>
+            <button type="button" nbButton status="primary" size="large">
+                Primary
+            </button>
+        </scl-button-group>
+
+        <button type="button" nbButton outline size="small">Primary</button>
+        <button type="button" nbButton outline>Primary</button>
+        <button type="button" nbButton outline size="large">Primary</button>
+
+        <button type="button" nbButton ghost size="small">Primary</button>
+        <button type="button" nbButton ghost status="primary">Primary</button>
+        <button type="button" nbButton ghost size="large">Primary</button>
+
+        <div class="section">
+            <button type="button" nbButton status="primary" size="medium">
+                Button Text
+            </button>
+            <button type="button" nbButton outline status="primary" size="small">
+                Button Text
+            </button>
+            <button type="button" nbButton ghost status="primary" size="small">
+                Button Text
+            </button>
+        </div>
+
+        <div class="section">
+            <button type="button" nbButton status="danger" size="small">
+                Button Text
+            </button>
+
+            <button type="button" nbButton ghost status="danger" size="small">
+                Button Text
+            </button>
+
+            <button type="button" nbButton outline status="danger" size="small" disabled>
+                Button Text
+            </button>
+            <button type="button" nbButton ghost size="small" status="danger" disabled>
+                Primary
+            </button>
+        </div>
+
+        <div>
+            <button type="button" nbButton ghost status="basic" size="small" disabled>
+                Button Text
+            </button>
+            <button type="button" nbButton outline status="basic" size="small">
+                Button Text
+            </button>
+            <button type="button" nbButton outline status="basic" size="small">
+                Button Text
+            </button>
+        </div>
+
+        <div class="section">
+            <nb-card>
+                <nb-card-body> Card </nb-card-body>
+            </nb-card>
+        </div>
+
+        <div class="section">
+            <nb-radio-group>
+                <nb-radio> Option 1 </nb-radio>
+
+                <nb-radio> Option 2 </nb-radio>
+
+                <nb-radio> Option 3 </nb-radio>
+            </nb-radio-group>
+        </div>
+
+        <div class="section">
+            <nb-card>
+                <nb-card-body>
+                    <nb-route-tabset [tabs]="tabs"></nb-route-tabset>
+                </nb-card-body>
+            </nb-card>
+        </div>
+        <scl-pagination [total]="500"></scl-pagination>
+
+        <button type="button" nbButton status="primary" (click)="openDrawer()">
+            Open Side Drawer
+        </button>
+
+        <ng-template #content>
+            <nb-radio-group>
+                <nb-radio> Option 1 </nb-radio>
+
+                <nb-radio> Option 2 </nb-radio>
+
+                <nb-radio> Option 3 </nb-radio>
+            </nb-radio-group>
+        </ng-template>
+
+        <nb-card>
+            <nb-card-body>
+                <scl-table [dataset]="myDataset">
+                    <ng-template sclTableColumn let-item header="Name">
+                        {{ item.name }}
+                    </ng-template>
+                    <ng-template sclTableColumn let-item header="Email">
+                        {{ item.email }}
+                    </ng-template>
+                    <ng-template sclTableColumn let-item header="Phone">
+                        {{ item.email }}
+                    </ng-template>
+
+                    <ng-template sclTableColumn let-item header="Action">
+                        <scl-button-group>
+                            <button type="button" nbButton size="small">
+                                Detail
+                            </button>
+                            <scl-context-menu>
+                                <button type="button" nbButton size="small">
+                                    More
+                                </button>
+                                <scl-context-menu-content>
+                                    <scl-context-menu-list>
+                                        <button type="button" nbButton ghost sclContextMenuItem (click)="openDrawer()">
+                                            Details
+                                        </button>
+                                        <button type="button" nbButton ghost sclContextMenuItem>
+                                            Reset Password
+                                        </button>
+                                    </scl-context-menu-list>
+
+                                    <scl-context-menu-list>
+                                        <button type="button" nbButton status="danger" ghost>
+                                            Delete
+                                        </button>
+                                    </scl-context-menu-list>
+                                </scl-context-menu-content>
+                            </scl-context-menu>
+                        </scl-button-group>
+                    </ng-template>
+                </scl-table>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <form [formGroup]="userForm">
+                    <scl-form-field errorMessage>
+                        <input type="text" nbInput placeholder="Placeholder" formControlName="name" />
+                        <scl-form-message></scl-form-message>
+                    </scl-form-field>
+                </form>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <form [formGroup]="userForm">
+                    <scl-row>
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Username</label>
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Name</label>
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" name="Name"
+                                    fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Email</label>
+                                <input type="timport { SclDropdownContent } from './dropdown/dropdown-content/dropdown-content';
+                ext" nbInput placeholder="Placeholder" formControlName="name" name="Name" fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Profile</label>
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" name="Name"
+                                    fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Profile</label>
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" name="Name"
+                                    fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+                    </scl-row>
+                </form>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <form [formGroup]="userForm">
+                    <scl-form-field errorMessage>
+                        <input type="text" nbInput placeholder="Placeholder" formControlName="name" />
+                        <scl-form-message></scl-form-message>
+                    </scl-form-field>
+                </form>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <form [formGroup]="userForm">
+                    <scl-row>
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Username</label>
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Name</label>
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" name="Name"
+                                    fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Email</label>
+                                <input type="timport { SclDropdownContent } from './dropdown/dropdown-content/dropdown-content';
+                ext" nbInput placeholder="Placeholder" formControlName="name" name="Name" fullWidth />
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" name="Name" fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Profile</label>
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" name="Name"
+                                    fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+
+                        <scl-column>
+                            <scl-form-field errorMessage>
+                                <label for="name" sclLabel>Profile</label>
+                                <input type="text" nbInput placeholder="Placeholder" formControlName="name" name="Name"
+                                    fullWidth />
+                                <scl-form-message></scl-form-message>
+                            </scl-form-field>
+                        </scl-column>
+                    </scl-row>
+                </form>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <scl-stepper>
+                    <scl-step label="test"> Stepper </scl-step>
+
+                    <scl-step label="test"> Stepper 2 </scl-step>
+
+                    <scl-step label="test"> Stepper 2 </scl-step>
+                </scl-stepper>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <button (click)="showToast()" nbButton status="primary">
+                    Show toast
+                </button>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <scl-filter [formFields]="filterFields" (onFilter)="OnFilterChange($event)"></scl-filter>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <scl-treeview (selectionChange)="onSelectionChange($event)" [dataSource]="dataSource" bindValue="name"
+                    bindLabel="label"></scl-treeview>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <scl-file-uploader (uploadFile)="onUploadFile($event)"></scl-file-uploader>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-body>
+                <scl-accordion heading="List of Roles" [dataSource]="accordionData"></scl-accordion>
+            </nb-card-body>
+        </nb-card>
+
+        <div class="section">
+            <a sclLink size="small" status="basic"> BASIC LINK </a> &nbsp;
+            <a sclLink size="medium" status="basic"> BASIC LINK </a> &nbsp;
+            <a sclLink size="large" status="basic"> BASIC LINK </a> &nbsp;
+            <a sclLink size="small" status="basic" disabled> BASIC LINK </a> &nbsp;
+        </div>
+
+        <div class="section">
+
+            <a sclLink size="small" status="primary"> PRIMARY LINK</a> &nbsp;
+            <a sclLink size="medium" status="primary"> PRIMARY LINK</a> &nbsp;
+            <a sclLink size="large" status="primary"> PRIMARY LINK</a> &nbsp;
+            <a sclLink size="small" status="primary" disabled> PRIMARY LINK</a> &nbsp;
+
+        </div>
+
+        <div class="section">
+            <a sclLink size="small" status="danger"> DANGER LINK</a> &nbsp;
+            <a sclLink size="medium" status="danger"> DANGER LINK</a> &nbsp;
+            <a sclLink size="large" status="danger"> DANGER LINK</a> &nbsp;
+            <a sclLink size="small" status="danger" disabled> DANGER LINK</a> &nbsp;
+        </div>
+
+        <div class="section">
+            <a sclLink size="small" status="info"> INFO LINK </a> &nbsp;
+            <a sclLink size="medium" status="info"> INFO LINK </a> &nbsp;
+            <a sclLink size="large" status="info"> INFO LINK </a> &nbsp;
+            <a sclLink size="small" status="info" disabled> INFO LINK </a> &nbsp;
+        </div>
+        <nb-card>
+            <nb-card-body>
+                <scl-column-text heading="Renew Date" [textAlign]="'right'">
+                    May 3, 2022
+                </scl-column-text>
+            </nb-card-body>
+        </nb-card>
+        <nb-card>
+            <nb-card-body>
+                <scl-column-text heading="Renew Date" [textAlign]="'right'">
+                    May 3, 2022
+                </scl-column-text>
+            </nb-card-body>
+        </nb-card>
+
+        <scl-ribbon status="primary" label="Primary" iconName="key">
+            <nb-card>
+                <nb-card-body>
+                </nb-card-body>
+            </nb-card>
+        </scl-ribbon>
+    </nb-layout-column>
+</nb-layout>

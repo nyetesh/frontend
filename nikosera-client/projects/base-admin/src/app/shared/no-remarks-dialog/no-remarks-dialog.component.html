@@ -1,0 +1,29 @@
+<nb-card>
+    <nb-card-body>
+        <div class="dialog-box">
+            <div class="dialog-box__header">
+                <div class="dialog-box__close" (click)="cancel()">
+                    <nb-icon icon="cross" pack="icons"></nb-icon>
+                </div>
+            </div>
+
+            <div class="dialog-box__body">
+                <h2 class="dialog-box__heading">{{noRemarksData.title}}</h2>
+                <p class="dialog-box__description">
+                    {{noRemarksData.headerMessage}}
+                </p>
+            </div>
+
+            <div class="button-group button-group--align-center">
+                <scl-button-group>
+                    <button nbButton size="small" class="dialog-box__description" status="primary" (click)="onSubmit()">
+                        Confirm
+                    </button>
+
+                    <button type="button" nbButton outline (click)="cancel()">Cancel</button>
+
+                </scl-button-group>
+            </div>
+        </div>
+    </nb-card-body>
+</nb-card>

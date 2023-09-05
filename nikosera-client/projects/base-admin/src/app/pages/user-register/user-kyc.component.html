@@ -1,0 +1,128 @@
+<xpas-page-container [contentType]="contentType">
+    <xpas-page-header heading="KYC"></xpas-page-header>
+    <xpas-form-container>
+        <form [formGroup]="userKycForm" (validateAndSubmit)="create($event)">
+
+            <scl-form-field errorMessage>
+                <label for="firstName" sclLabel>First Name</label>
+                <input type="text" nbInput fullWidth id="firstName" placeholder="Enter First Name"
+                    formControlName="firstName" name="First Name">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="firstName" sclLabel>Middle Name</label>
+                <input type="text" nbInput fullWidth id="middleName" placeholder="Enter Middle Name"
+                    formControlName="middleName" name="Middle Name">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="lastName" sclLabel>Last Name</label>
+                <input type="text" nbInput fullWidth id="lastName" placeholder="Enter Last Name"
+                    formControlName="lastName" name="Last Name">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="email" sclLabel>Email Address</label>
+                <input type="text" nbInput fullWidth id="email" placeholder="Enter Email Address"
+                    formControlName="emailAddress" name="Email">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="mobileNumber" sclLabel>Mobile Number</label>
+                <input type="text" nbInput fullWidth id="mobileNumber" placeholder="Enter Mobile Number"
+                    formControlName="mobileNumber" name="Mobile Number">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <label for="gender" sclLabel>Gender</label>
+            <scl-form-field errorMessage>
+                <scl-row [columns]="3">
+                    <nb-radio-group [formControl]="gender">
+                        <nb-radio *ngFor="let item of genders" [value]="item.value">{{item.label}}</nb-radio>
+                    </nb-radio-group>
+                </scl-row>
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="toDate" sclLabel> Date Of Birth</label>
+                <input type="text" nbInput fullWidth [nbDatepicker]="dobPicker" [formControl]="dob" id="dob"
+                    name="Date Of Birth" placeholder="Type or select a date" />
+                <button type="button" nbButton size="small" ghost formControlIcon>
+                    <nb-icon icon="calender" pack="xpas-shell"></nb-icon>
+                </button>
+                <nb-datepicker #dobPicker></nb-datepicker>
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <label for="maritalStatus" sclLabel>Marital Status</label>
+            <scl-form-field errorMessage>
+                <scl-row [columns]="2">
+                    <nb-radio-group [formControl]="maritalStatus">
+                        <nb-radio *ngFor="let option of maritalStatusOptions" [value]="option.value">{{option.label}}</nb-radio>
+                    </nb-radio-group>
+                </scl-row>
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+            
+            <label for="salutation" sclLabel>Salutation</label>
+            <scl-form-field errorMessage>
+                <scl-row [columns]="3">
+                    <nb-radio-group [formControl]="salutation">
+                        <nb-radio *ngFor="let item of salutationOptions" [value]="item.value">{{item.label}}</nb-radio>
+                    </nb-radio-group>
+                </scl-row>
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="nationality" sclLabel>Nationality</label>
+                <input type="text" nbInput fullWidth id="nationality" placeholder="Enter Nationality"
+                    formControlName="nationality" name="Nationality">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="occupation" sclLabel>Occupation</label>
+                <input type="text" nbInput fullWidth id="occupation" placeholder="Occupation"
+                    formControlName="occupation" name="Occupation">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="addressOne" sclLabel>Address 1</label>
+                <input type="text" nbInput fullWidth id="addressOne" placeholder="Enter Address"
+                    formControlName="addressOne" name="Address 1">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-form-field errorMessage>
+                <label for="addresstwo" sclLabel>Address 2(Optional)</label>
+                <input type="text" nbInput fullWidth id="addressTwo" placeholder="Enter Address"
+                    formControlName="addressTwo" name="Address 2">
+                <scl-form-message></scl-form-message>
+            </scl-form-field>
+
+            <scl-button-group>
+                <button type="submit" nbButton status="primary">Create</button>
+                <button type="reset" nbButton outline (click)="reset()">Reset</button>
+            </scl-button-group>
+        </form>
+    </xpas-form-container>
+
+    <xpas-page-container-info heading="Admin created successfully" type="success">
+        You have successfully created an account for user. A link to create password has been sent to their email.
+        <scl-button-group>
+            <!-- <button type="button" nbButton status="primary" (click)="createNewUser()">
+                Create Another User
+            </button> -->
+            <!-- <button type="button" nbButton outline (click)="viewDetail(adminDetail.eid)">
+                View Details
+            </button> -->
+        </scl-button-group>
+    </xpas-page-container-info>
+</xpas-page-container>

@@ -1,0 +1,24 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-section-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    position: sticky;
+    top: 75px;
+    background-color: nb-theme(xpas-section-header-background-color);
+    z-index: 1;
+    
+    &__heading {
+        margin: nb-theme(xpas-section-header-heading-margin);
+        padding: nb-theme(xpas-section-header-heading-padding);
+        color: nb-theme(xpas-section-header-heading-color);
+        font-size: nb-theme(xpas-section-header-heading-font-size);
+        font-weight: nb-theme(xpas-section-header-heading-font-weight);
+        line-height: nb-theme(xpas-section-header-heading-line-height);
+    }
+}
+.xpas-section-header-line {
+    border-width: nb-theme(xpas-section-line-border-width);
+    border-style: solid;
+    border-color: nb-theme(xpas-section-line-border-color);
+}

@@ -1,0 +1,22 @@
+@use "@nebular/theme/styles/theming" as *;
+.scl-form-field {
+    display: block;
+    margin-bottom: calc(
+        nb-theme(scl-form-field-padding) - nb-theme(text-caption-padding-top) -
+        nb-theme(text-caption-padding-bottom)
+    );
+}
+
+.scl-form-control-icon {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    pointer-events: none;
+
+    // to override nebular position:relative
+    &[nbButton]:focus,
+    &[nbButtonToggle]:focus {
+        position: absolute;
+        outline: none;
+    }
+}

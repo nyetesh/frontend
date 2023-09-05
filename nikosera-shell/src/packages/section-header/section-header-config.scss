@@ -1,0 +1,18 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        xpas-section-header-heading-font-size: title-small-font-size,
+        xpas-section-header-heading-line-height: title-small-line-height,
+        xpas-section-header-heading-font-weight: semi-bold-font-weight,
+        xpas-section-header-heading-color: color-basic-900,
+        xpas-section-header-heading-padding: 0.25rem 0 0.75rem,
+        xpas-section-header-heading-margin: 0,
+
+        xpas-section-header-line-border-width: 0 0 0.063rem 0,
+        xpas-section-header-line-border-color: color-basic-300,
+        xpas-section-header-background-color: color-base-white,
+    ),
+    default,
+    default
+);

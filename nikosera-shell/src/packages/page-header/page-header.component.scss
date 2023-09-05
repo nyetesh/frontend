@@ -1,0 +1,40 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-page-header {
+    display: flex;
+    align-items: center;
+    gap: nb-theme(page-header-gap);
+    position: sticky;
+    top: 20px;
+    background-color: nb-theme(page-header-background-color);
+    min-height: nb-theme(page-header-min-height);
+    padding: nb-theme(page-header-padding);
+    margin: nb-theme(page-header-margin);
+    border-bottom: nb-theme(page-header-border-width) solid
+        nb-theme(page-header-border-color);
+    z-index: 1;
+
+    &::before {
+        content: '';
+        height: nb-theme(page-header-before-content-height);
+        width: nb-theme(page-header-before-content-width);
+        background-color: nb-theme(page-header-background-color);
+        position: absolute;
+        top: -20px;
+    }
+
+    &__title {
+        font-size: nb-theme(page-header-title-font-size);
+        font-weight: nb-theme(page-header-title-font-weight);
+        line-height: nb-theme(page-header-title-line-height);
+        letter-spacing: nb-theme(page-header-title-letter-spacing);
+        color: nb-theme(page-header-title-color);
+        margin: nb-theme(page-header-title-margin);
+        flex-grow: 1;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+}

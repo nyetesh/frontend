@@ -1,0 +1,81 @@
+@use "@nebular/theme/styles/theming" as *;
+nb-menu {
+    .menu-items {
+        .menu-group {
+            text-transform: uppercase;
+            font-size: nb-theme(sidebar-label-font-size);
+            line-height: nb-theme(sidebar-label-line-height);
+            letter-spacing: nb-theme(sidebar-label-uppercase-tracking);
+            padding: nb-theme(menu-group-padding);
+        }
+
+        .expanded {
+            border-left: nb-theme(menu-items-expanded-border-width) solid
+                nb-theme(menu-items-expanded-border-color);
+        }
+
+        .menu-item {
+            a.active {
+                &:has(+ .menu-items) {
+                    background-color: nb-theme(sidebar-background-color);
+                    color: nb-theme(menu-text-color);
+
+                    .menu-icon {
+                        color: nb-theme(menu-text-color);
+                    }
+                }
+            }
+
+            .menu-items.collapsed {
+                padding: nb-theme(menu-items-collapsed-submenu-padding);
+            }
+        }
+    }
+}
+
+nb-sidebar.compacted {
+    nb-menu {
+        display: inherit;
+
+        .menu-items {
+            .menu-item {
+                a {
+                    padding: nb-theme(sidebar-compacted-menu-item-padding);
+
+                    .menu-icon {
+                        margin: nb-theme(
+                            sidebar-compacted-menu-item-icon-margin
+                        );
+                    }
+                }
+
+                a.active {
+                    &:has(+ .menu-items) {
+                        background-color: nb-theme(
+                            menu-item-active-background-color
+                        );
+                    }
+
+                    .menu-icon {
+                        color: nb-theme(menu-item-active-text-color);
+                    }
+
+                    &::before {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// overriding nebular menu chevron-left icon as chevron-right
+.menu-item {
+    &:has(.menu-items.collapsed) {
+        a {
+            nb-icon.expand-state {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

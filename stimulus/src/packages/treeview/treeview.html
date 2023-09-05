@@ -1,0 +1,37 @@
+<table class="table nested-table">
+  <tbody>
+    <tr>
+      <td>
+        <div class="tree-node parent-tree-node">
+          <nb-checkbox
+            [checked]="isAllSelected(dataSource)"
+            (checkedChange)="toggleAllSelection()"
+          >All</nb-checkbox>
+        </div>
+      </td>
+    </tr>
+    <ng-container *ngTemplateOutlet="recursiveNode; context:{ $implicit: dataSource }"></ng-container>
+  </tbody>
+</table>
+
+<ng-template #recursiveNode let-nodes>
+  <tr *ngFor="let node of nodes" [class.tree-node]="node.children">
+    <td>
+      <div class="tree-node">
+        <!-- <button nbButton size="small" *ngIf="node.children" (click)="node.expanded = !node.expanded">
+          <nb-icon [icon]="node.expanded ? 'chevron-down-outline' : 'chevron-right-outline'"></nb-icon>
+        </button> -->
+        <nb-checkbox
+          [checked]="node.checked"
+          (checkedChange)="toggleNodeSelection(node)"
+          [indeterminate]="node.indeterminate"
+        >    {{ node[bindLabel] }}</nb-checkbox>
+      </div>
+      <table class="table nested-table" *ngIf="node.children && node.expanded">
+        <tbody>
+          <ng-container *ngTemplateOutlet="recursiveNode; context:{ $implicit: node.children }"></ng-container>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</ng-template>

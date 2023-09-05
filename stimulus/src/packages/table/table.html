@@ -1,0 +1,11 @@
+<table cdk-table [dataSource]="dataset">
+    <ng-container *ngFor="let column of columnTemplates.toArray(); let i = index" cdkColumnDef="{{'column-' + i}}">
+      <th cdk-header-cell *cdkHeaderCellDef [attr.width]="column.width">{{column.header}}</th>
+      <td cdk-cell *cdkCellDef="let element" [attr.align]="column.columnAlign">
+        <ng-container *ngTemplateOutlet="column.template; context: { $implicit: element }"></ng-container>
+      </td>
+    </ng-container>
+  
+    <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"></tr>
+  </table> 

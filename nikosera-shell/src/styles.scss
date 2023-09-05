@@ -1,0 +1,24 @@
+@forward '@nebular/theme/styles/theming';
+@use '@nebular/theme/styles/theming' as *;
+@use '@nebular/theme/styles/themes/default';
+
+@use '../../stimulus/src/styles/base/nebular/nebular-config/color';
+@use './styles/temp.config.scss' as *;
+@use './packages/shell/shell.config.scss' as *;
+@use './packages/page-header/page-header-config.scss' as *;
+
+// framework component styles
+@use '@nebular/theme/styles/globals' as *;
+
+@use './packages/shell/shell.component.scss' as *;
+@use './packages/page-header/page-header.component.scss' as *;
+
+@use './app/sidebar-menu/sidebar-menu.component.scss' as *;
+
+
+// install the framework styles
+@include nb-install() {
+    @include nb-theme-global();
+}
+
+@include xpas-shell-install();

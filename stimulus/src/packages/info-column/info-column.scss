@@ -1,0 +1,17 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-info-column {
+    &__title {
+        color: nb-theme(scl-info-column-title-color);
+        margin: nb-theme(scl-info-column-title-margin);
+        font-size: nb-theme(scl-info-column-title-font-size);
+        line-height: nb-theme(scl-info-column-title-line-height);
+        font-weight: nb-theme(scl-info-column-title-font-weight);
+        text-transform: nb-theme(scl-info-column-title-text-transform);
+    }
+
+    &__content {
+        font-size: 0.875rem;
+        line-height: 1.43;
+    }
+}

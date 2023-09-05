@@ -1,0 +1,16 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        // Column separator styles  
+        xpas-column-separator-nano-margin: 0.125rem,
+        xpas-column-separator-micro-margin: 0.25rem,
+        xpas-column-separator-tiny-margin: 0.5rem,
+        xpas-column-separator-small-margin: 0.75rem,
+        xpas-column-separator-medium-margin: 1rem,
+        xpas-column-separator-large-margin: 1.25rem,
+        xpas-column-separator-giant-margin: 1.25rem,
+    ),
+    default,
+    default
+);

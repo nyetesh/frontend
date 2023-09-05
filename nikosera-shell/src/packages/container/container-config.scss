@@ -1,0 +1,10 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        // Content wrapper styles
+        xpas-container-medium-width: 32.5rem,
+    ),
+    default,
+    default
+);

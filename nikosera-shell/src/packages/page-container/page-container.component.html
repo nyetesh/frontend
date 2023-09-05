@@ -1,0 +1,7 @@
+<ng-container *ngIf="showDefaultContent">
+    <ng-content> </ng-content>
+</ng-container>
+
+<ng-container *ngIf="!showDefaultContent">
+    <ng-content select="xpas-page-container-info"> </ng-content>
+</ng-container>

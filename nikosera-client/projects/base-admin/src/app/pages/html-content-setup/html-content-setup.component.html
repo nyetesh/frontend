@@ -1,0 +1,23 @@
+<nb-card><nb-card-body>
+        <form [formGroup]="htmlContentCreateForm">
+
+
+            <div class="invisible-input-cont">
+                <input #quillFile type="file" (change)="quillFileSelected($event)">
+            </div>
+            ...
+            <quill-editor #meQuill formControlName="content" [modules]="editorModules" name="Content"
+                (onEditorCreated)="getMeEditorInstance($event)"></quill-editor>
+
+            <label for="email" formLabel>Html Code</label>
+            <textarea type="text" nbInput fullWidth id="code" placeholder="Email COde" fieldSize="large"
+                formControlName="code" name="Email"> </textarea>
+        </form>
+
+    </nb-card-body></nb-card>
+
+<button nbButton (click)="test()">Get Html</button>
+<button (click)="convertToHtml()">Convert Html</button>
+
+
+{{content}}

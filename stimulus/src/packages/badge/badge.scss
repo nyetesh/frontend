@@ -1,0 +1,19 @@
+@use '@nebular/theme/styles/theming' as *;
+
+.scl-badge {
+    display: inline-flex;
+    padding: nb-theme(scl-badge-padding);
+    font-size: nb-theme(scl-badge-font-size);
+    line-height: nb-theme(scl-badge-line-height);
+    letter-spacing: nb-theme(scl-badge-uppercase-tracking);
+    font-weight: nb-theme(scl-badge-font-weight);
+    border-radius: nb-theme(scl-badge-border-radius);
+
+    $status: (primary, info, success, warning, danger, basic, control, light-green, rose, orange);
+    @each $key in $status {
+        &--#{$key} {
+            background-color: nb-theme(scl-badge-#{$key}-background-color);
+            color: nb-theme(scl-badge-#{$key}-text-color);
+        }
+    }
+}

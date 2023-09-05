@@ -1,0 +1,44 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        // Angular table column styles 
+        table-column-padding: 0.625rem 0.5rem,
+        table-column-border-color: color-basic-30,
+
+        // Angular table header styles
+        table-header-background-color: color-basic-50,
+        table-header-text-color: color-basic-600,
+        table-header-font-weight: light-font-weight,
+        table-header-font-size: label-medium-font-size,
+
+        // Angular table row styles
+        table-row-hover-color: color-primary-50,
+        table-row-border-width: 0 0 0.0625rem 0.125rem,
+        table-row-border-color: color-basic-300,
+        table-row-border-hover-color: color-primary-500,
+        table-row-border-hover-width: 0 0 0.0625rem 0.125rem,
+
+        // Angular table data styles
+        table-data-text-color: color-basic-900,
+        table-data-font-size: label-large-font-size,
+        table-data-font-weight: light-font-weight,
+        table-data-line-height: label-large-line-height,
+        table-data-padding: 0.5rem,
+
+        // Stimulus table styles
+        scl-table-text-font-weight: light-font-weight,
+        scl-table-text-color: color-basic-600,
+        scl-table-text-small-font-size: 0.75rem,
+        scl-table-text-small-line-height: 1.33rem,
+
+        scl-table-unstriped-background-color: color-base-white,
+        scl-table-unstriped-row-border-hover-color: color-basic-300,
+        scl-table-unstriped-row-border-hover-width: 0 0 0.0625rem 0.125rem,
+        scl-table-unstriped-data-padding: 0.5rem 0,
+        scl-table-unstriped-row-border-width: 0 0 0.0625rem 0rem,
+
+    ),
+        default,
+        default
+);

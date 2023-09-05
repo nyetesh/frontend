@@ -1,0 +1,5 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-button-group-header {
+    color: nb-theme(scl-button-group-header-color);
+}

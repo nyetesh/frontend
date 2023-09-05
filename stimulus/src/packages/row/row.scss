@@ -1,0 +1,9 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-row {
+    display: grid;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-template-columns: repeat(var(--number-of-columns), 1fr);
+    gap: nb-theme(scl-row-gap);
+}

@@ -1,0 +1,25 @@
+@use '@nebular/theme/styles/theming' as *;
+
+
+.cdk-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cdk-header-cell {
+    background-color: nb-theme(table-header-background-color);
+    padding: 0.625rem 0.5rem;
+}
+
+.cdk-row {
+    &:nth-child(even) {
+        background-color: nb-theme(table-header-background-color);
+    }
+    
+}
+
+.cdk-cell {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid  nb-theme(table-column-border-color);
+}

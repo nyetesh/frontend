@@ -1,0 +1,22 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.scl-column-text {
+    &__title {
+        color: nb-theme(scl-column-text-heading-color);
+        margin: nb-theme(scl-column-text-heading-margin);
+    }
+
+    &__content {
+        color: nb-theme(scl-column-text-content-color);
+    }
+
+    &--right {
+        text-align: right;
+    }
+    &--left {
+        text-align: left;
+    }
+    &--center {
+        text-align: center;
+    }
+}

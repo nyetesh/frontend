@@ -1,0 +1,22 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-container {
+    display: block;
+    margin: auto;
+    
+    &--tiny {
+        width: nb-theme(xpas-container-tiny-width);
+    }
+    &--small {
+        width: nb-theme(xpas-container-small-width);
+    }
+    &--medium {
+        width: nb-theme(xpas-container-medium-width);
+    }
+    &--large {
+        width: nb-theme(xpas-container-large-width);
+    }
+    &--giant {
+        width: nb-theme(xpas-container-giant-width);
+    }
+}

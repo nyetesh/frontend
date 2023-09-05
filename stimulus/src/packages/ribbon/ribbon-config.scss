@@ -1,0 +1,21 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        scl-ribbon-badge-border-top-left-radius: 0.375rem,
+        scl-ribbon-badge-border-bottom-left-radius: 0,
+        scl-ribbon-badge-left: -0.188rem,
+        scl-ribbon-badge-transform: translateY(-50%),
+
+        scl-ribbon-badge-content-width: 0.25rem,
+        scl-ribbon-badge-content-height: 0.125rem,
+        scl-ribbon-badge-content-top: 100%,
+        scl-ribbon-badge-content-border-bottom-left-radius: 1rem,
+        scl-ribbon-badge-content-background-color: color-info-300,
+
+        scl-radio-badge-icon-height: 0.75rem,
+        scl-radio-badge-icon-width: 0.75rem,
+    ),
+    default,
+    default
+);

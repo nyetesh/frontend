@@ -1,0 +1,19 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        // Section line styles
+        xpas-section-line-border-width:0 0 0.063rem 0,
+        xpas-section-line-border-color: color-basic-300,
+
+        // Section separator styles
+        xpas-section-separator-micro-margin: 0.25rem,
+        xpas-section-separator-tiny-margin: 0.5rem,
+        xpas-section-separator-small-margin: 0.75rem,
+        xpas-section-separator-medium-margin: 1rem,
+        xpas-section-separator-large-margin: 1.25rem,
+        xpas-section-separator-giant-margin: 1.25rem,
+    ),
+    default,
+    default
+);

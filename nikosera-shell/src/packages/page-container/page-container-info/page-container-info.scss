@@ -1,0 +1,7 @@
+@use "@nebular/theme/styles/theming" as *;
+@use "../../shell/shell-config.scss" as *;
+
+.xpas-page-container-info {
+    min-height: nb-theme(xpas-page-container-content-height);
+    display: grid;
+}

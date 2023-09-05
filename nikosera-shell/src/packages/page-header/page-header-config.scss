@@ -1,0 +1,30 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        // Page header before config
+
+        page-header-before-content-height: 1.25rem,
+        page-header-before-content-width: 100%,
+        page-header-background-color: color-base-white,
+
+        // Page header title config
+        page-header-title-color: color-basic-900,
+        page-header-title-font-size: title-medium-font-size,
+        page-header-title-font-weight: semi-bold-font-weight,
+        page-header-title-line-height: title-medium-line-height,
+        page-header-title-letter-spacing: title-medium-letter-spacing,
+        page-header-title-margin: 0,
+
+        // Page header config
+        page-header-min-height: 2.5rem,
+        page-header-border-color: color-basic-300,
+        page-header-border-width: 1px,
+        page-header-margin: 0 0 1.25rem,
+        page-header-padding: 0 0 0.719rem 0,
+        page-header-gap: 0.5rem,
+
+    ),
+    default,
+    default
+);

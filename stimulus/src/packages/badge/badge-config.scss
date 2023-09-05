@@ -1,0 +1,35 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        scl-badge-padding: .125rem .5rem,
+        scl-badge-font-size: label-medium-font-size,
+        scl-badge-line-height: label-medium-line-height,
+        scl-badge-uppercase-tracking: label-medium-uppercase-tracking,
+        scl-badge-font-weight: bold-font-weight,
+        scl-badge-border-radius: 1rem,
+
+        scl-badge-primary-background-color: color-primary-100,
+        scl-badge-primary-text-color: color-primary-800,
+        scl-badge-info-background-color: color-info-100,
+        scl-badge-info-text-color: color-info-800,
+        scl-badge-success-background-color: color-success-100,
+        scl-badge-success-text-color: color-success-800,
+        scl-badge-warning-background-color: color-warning-100,
+        scl-badge-warning-text-color: color-warning-800,
+        scl-badge-danger-background-color: color-danger-100,
+        scl-badge-danger-text-color: color-danger-800,
+        scl-badge-basic-background-color: color-basic-100,
+        scl-badge-basic-text-color: color-basic-800,
+        scl-badge-control-background-color: color-control-100,
+        scl-badge-control-text-color: color-control-800,
+        scl-badge-light-green-background-color: color-supporting-light-green-100,
+        scl-badge-light-green-text-color: color-supporting-ight-green-800,
+        scl-badge-rose-background-color: color-supporting-rose-100,
+        scl-badge-rose-text-color: color-supporting-rose-800,
+        scl-badge-orange-background-color: color-supporting-orange-100,
+        scl-badge-orange-text-color: color-supporting-orange-800,
+    ),
+    default,
+    default
+);  

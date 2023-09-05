@@ -1,0 +1,33 @@
+@use "@nebular/theme/styles/theming" as *;
+
+$nb-themes: nb-register-theme(
+    (
+        tabset-tab-text-transform: capitalize,
+        scl-tabset-background-color: color-basic-100,
+        tabset-divider-color: transparent,
+        tabset-tab-padding: 0.375rem 0.75rem,
+        tabset-tab-text-font-size: 0.875rem,
+        tabset-tab-text-color: color-basic-600,
+        tabset-padding: 0.25rem,
+        tabset-border-radius: 0.5rem,
+
+        tabset-tab-hover-background-color: color-basic-200,
+        tabset-tab-hover-underline-color: transparent,
+        tabset-tab-hover-text-color: route-tabset-tab-text-color,
+
+        tabset-tab-focus-text-color: route-tabset-tab-text-color,
+        tabset-tab-focus-border-color: color-primary-100,
+        tabset-tab-focus-outline-color: color-primary-100,
+        tabset-tab-focus-border-width: 4px,
+
+        tabset-content-padding: 1rem 0 0 0,
+
+
+        tabset-min-width: 60px,
+        tabset-gap: 0.25rem,
+
+        scl-tabset-tab-padding : 0.25rem 0.25rem 0.25rem 0
+    ),
+    default,
+    default
+);

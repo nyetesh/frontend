@@ -1,0 +1,25 @@
+@use "@nebular/theme/styles/theming" as *;
+
+.xpas-column-separator {
+    &--nano {
+        margin-right: nb-theme(xpas-column-separator-nano-margin);
+    }
+    &--micro {
+        margin-right: nb-theme(xpas-column-separator-micro-margin);
+    }
+    &--tiny {
+        margin-right: nb-theme(xpas-column-separator-tiny-margin);
+    }
+    &--small {
+        margin-right: nb-theme(xpas-column-separator-small-margin);
+    }
+    &--medium {
+        margin-right: nb-theme(xpas-column-separator-medium-margin);
+    }
+    &--large {
+        margin-right: nb-theme(xpas-column-separator-large-margin);
+    }
+    &--giant {
+        margin-right: nb-theme(xpas-column-separator-giant-margin);
+    }
+}

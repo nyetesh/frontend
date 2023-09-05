@@ -1,0 +1,79 @@
+@use '@nebular/theme/styles/theming' as *;
+
+.cdk-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cdk-header-cell {
+    background-color: nb-theme(table-header-background-color);
+    padding: nb-theme(table-column-padding);
+    font-size: nb-theme(table-header-font-size);
+    font-weight: nb-theme(table-header-font-weight);
+    color: nb-theme(table-header-text-color);
+
+    &:empty {
+        padding: 0;
+    }
+}
+
+.cdk-row {
+    border-width: nb-theme(table-row-border-width);
+    border-style: solid;
+    border-color: nb-theme(table-row-border-color);
+    border-left-color: transparent;
+
+    &:nth-child(even) {
+        background-color: nb-theme(table-header-background-color);
+    }
+
+    &:hover {
+        background-color: nb-theme(table-row-hover-color);
+        border-width: nb-theme(table-row-border-hover-width);
+        border-style: solid;
+        border-color: nb-theme(table-row-border-hover-color);
+        border-bottom-color: transparent;
+    }
+}
+
+.cdk-cell {
+    padding: nb-theme(table-data-padding);
+    font-size: nb-theme(table-data-font-size);
+    font-weight: nb-theme(table-data-font-weight);
+    border-bottom: 1px solid nb-theme(table-column-border-color);
+}
+
+.scl-table-text {
+    display: block;
+    font-weight: nb-theme(scl-table-text-font-weight);
+    color: nb-theme(scl-table-text-color);
+
+    &--small {
+        font-size: nb-theme(scl-table-text-small-font-size);
+        line-height: nb-theme(scl-table-text-small-line-height);
+    }
+}
+
+.scl-table-unstriped {
+    .cdk-table {
+        .cdk-header-cell {
+            background-color: nb-theme(scl-table-unstriped-background-color);
+        }
+
+        .cdk-cell {
+            padding: nb-theme(scl-table-unstriped-data-padding);
+        }
+        .cdk-row {
+            border-width: nb-theme(scl-table-unstriped-row-border-width);
+
+            &:nth-child(even) {
+                background-color: nb-theme(scl-table-unstriped-background-color);
+            }
+            &:hover {
+                background-color: transparent;
+                border-width: nb-theme(scl-table-unstriped-row-border-width);
+                border-color: nb-theme(table-row-border-color);
+            }
+        }
+    }
+}

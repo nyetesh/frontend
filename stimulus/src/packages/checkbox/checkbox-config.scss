@@ -1,0 +1,57 @@
+@use '@nebular/theme/styles/theming' as *;
+
+$nb-themes: nb-register-theme(
+    (
+        // Nebular checkbox styles
+        checkbox-text-font-weight: medium-font-weight,
+        checkbox-text-font-size: label-large-font-size,
+        checkbox-text-font-height: 1.25rem,
+        checkbox-basic-text-color: color-basic-900,
+
+        checkbox-height: 1.25rem,
+        checkbox-width: 1.25rem,
+
+        checkbox-basic-border-color: color-basic-300,
+        checkbox-basic-checked-border-color: color-primary-500,
+        checkbox-basic-checked-background-color: color-primary-50,
+
+        //checkbox hover states
+        checkbox-basic-hover-background-color: color-primary-50,
+        checkbox-basic-hover-border-color: color-primary-500,
+
+        checkbox-basic-hover-checked-background-color: color-primary-100,
+        checkbox-basic-hover-checked-border-color: color-primary-600,
+
+        //checkbox active states
+        checkbox-basic-active-background-color: color-primary-100,
+        checkbox-basic-active-border-color: color-primary-500,
+
+        checkbox-basic-active-checked-background-color: color-primary-200,
+        checkbox-basic-active-checked-border-color: color-primary-700,
+
+        //checkbox focus states
+        checkbox-basic-focus-background-color: color-base-white,
+        checkbox-basic-focus-border-color: color-primary-50,
+
+        checkbox-basic-focus-checked-background-color: color-primary-50,
+        checkbox-basic-focus-checked-border-color: color-primary-100,
+
+        //checkbox-checkmark color
+        checkbox-basic-checked-checkmark-color: color-primary-500,
+        checkbox-basic-indeterminate-checkmark-color: color-primary-500,
+
+        //checkbox indeterminate states
+        checkbox-basic-indeterminate-background-color: color-primary-50,
+        checkbox-basic-indeterminate-border-color: color-primary-500,
+
+        //disabled states
+        checkbox-basic-disabled-background-color: color-basic-100,
+        checkbox-basic-disabled-border-color: color-basic-300,
+        checkbox-basic-disabled-checkmark-color: color-basic-300,
+        checkbox-basic-disabled-text-color: color-basic-900,
+
+        checkbox-outline-width: 0.125rem,
+        checkbox-outline-color: color-primary-50,
+    ),
+        default,
+        default);

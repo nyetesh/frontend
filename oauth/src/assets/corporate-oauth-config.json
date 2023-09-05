@@ -1,0 +1,18 @@
+{
+    "oauthConfig": {
+        "clientId": "8vDhNcILaRqxjVYyZd2k8o2Xt8Ia",
+        "serverUrl": "https://10.13.194.173:9443",
+        "issuer": "/oauth2/token",
+        "redirectUri": "http://localhost:4200/identity",
+        "scope": "openid profile identity ",
+        "tokenEndpoint": "/oauth2/token",
+        "userinfoEndpoint": "/oauth2/userinfo",
+        "authorizationEndpoint": "/oauth2/authorize",
+        "jwksEndpoint": "/oauth2/jwks",
+        "showDebugInformation": true,
+        "disableAtHashCheck": true,
+        "requireHttps": false,
+        "responseType": "code",
+        "logOutUrl": "https://10.13.194.173:9443/oidc/logout"
+    }
+}
